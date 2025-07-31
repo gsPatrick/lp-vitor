@@ -1,0 +1,81 @@
+/* src/components/ContactSection/ContactSection.module.css (VERSÃO COM CARDS) */
+
+.contactSection {
+  background-color: var(--background-color);
+  padding: 120px 20px;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  perspective: 1000px; /* Habilita o espaço 3D para os cards */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transform-style: preserve-3d;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.card:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.iconWrapper {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.cardContact {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.cardArrow {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+.card:hover .cardArrow {
+  transform: translateX(8px);
+}

@@ -1,0 +1,191 @@
+/* src/components/Header/Header.module.css (ATUALIZADO) */
+
+.headerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent; /* Fundo transparente inicialmente */
+  padding: 20px 0;
+  transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease, padding var(--transition-speed) ease;
+}
+
+.headerContainer.scrolled {
+  background-color: #ffffff; /* Fundo branco no scroll */
+  padding: 15px 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estado inicial (sobre o Hero) */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-light); /* Texto branco */
+  transition: color var(--transition-speed) ease;
+}
+
+.navLinkItem {
+  color: var(--text-light); /* Texto branco */
+  opacity: 0.8;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color var(--transition-speed) ease, opacity var(--transition-speed) ease;
+}
+
+.menuToggle span {
+  background: var(--text-light); /* Ícone do menu branco */
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+/* Estado com scroll (.scrolled) */
+.headerContainer.scrolled .logo,
+.headerContainer.scrolled .navLinkItem {
+  color: var(--primary-color); /* Texto escuro */
+}
+.headerContainer.scrolled .navLinkItem {
+  opacity: 1;
+}
+.headerContainer.scrolled .menuToggle span {
+  background: var(--primary-color); /* Ícone do menu escuro */
+}
+
+/* --- Restante do CSS permanece similar --- */
+
+.navLinks {
+  display: none;
+  list-style: none;
+  gap: 30px;
+}
+
+.navLinkItem::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width var(--transition-speed) ease;
+}
+
+.navLinkItem:hover {
+  color: var(--accent-color);
+  opacity: 1;
+}
+.headerContainer.scrolled .navLinkItem:hover {
+  color: var(--primary-color);
+}
+.navLinkItem:hover::after {
+  width: 100%;
+}
+
+
+.ctaButton {
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+  will-change: transform;
+}
+
+.ctaButton:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.menuToggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+/* Animação do Hamburger para "X" */
+.menuToggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.menuToggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menuToggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+  transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileMenu.open {
+  right: 0;
+}
+
+.mobileNavLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 40px;
+}
+
+.mobileNavLinks a {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.mobileCta {
+  background-color: var(--accent-color);
+  color: var(--primary-color) !important;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+@media (min-width: 769px) {
+  .menuToggle {
+    display: none;
+  }
+  .navLinks {
+    display: flex;
+  }
+  .ctaButton {
+    display: inline-block;
+  }
+}

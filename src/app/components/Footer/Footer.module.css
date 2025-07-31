@@ -1,0 +1,113 @@
+/* src/components/Footer/Footer.module.css (VERSÃO COMPLETA) */
+
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 80px 20px 0; /* Padding inferior será na barra de copyright */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas em mobile */
+  gap: 40px 20px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--secondary-color);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.brandColumn {
+  grid-column: span 2; /* Ocupa as 2 colunas em mobile */
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--text-light);
+  opacity: 0.7;
+  margin-bottom: 20px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.socialLinks a {
+  color: var(--text-light);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+.socialLinks a:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.linksColumn {
+  text-align: center;
+}
+
+.columnTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.linkList a {
+  color: var(--text-light);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+.linkList a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.bottomBar {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  opacity: 0.6;
+}
+
+/* --- Media Query para Desktop --- */
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Layout de 4 colunas */
+    gap: 40px;
+  }
+  .brandColumn, .linksColumn {
+    grid-column: span 1; /* Cada um ocupa 1 coluna */
+    text-align: left;
+  }
+  .socialLinks {
+    justify-content: flex-start;
+  }
+  .tagline {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

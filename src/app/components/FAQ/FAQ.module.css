@@ -1,0 +1,119 @@
+/* src/components/FAQ/FAQ.module.css (VERSÃO COMPLETA) */
+
+.faqSection {
+  background-color: var(--background-color);
+  padding: 120px 20px;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+  
+  /* Variável para a animação de WIPE */
+  --wipe-height: 100%;
+}
+
+/* Pseudo-elemento para a animação de WIPE REVEAL */
+.faqItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--wipe-height);
+  background-color: var(--border-color);
+  z-index: -1;
+}
+.faqItem:first-child {
+  border-top: 1px solid var(--border-color);
+}
+.faqItem:first-child::before {
+  content: none; /* O primeiro item não precisa de wipe superior */
+}
+
+.questionWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  cursor: pointer;
+}
+
+.question {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding-right: 20px;
+}
+
+.toggleIcon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.toggleIcon span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform-origin: center;
+}
+.toggleIcon span:last-child {
+  transform: rotate(90deg);
+}
+.toggleIcon.open span:last-child {
+  transform: rotate(0deg);
+}
+
+.answerWrapper {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+.answer {
+  padding: 0 0 30px 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--secondary-color);
+  max-width: 95%; /* Evita que o texto encoste no ícone */
+}
+
+@media (max-width: 768px) {
+  .faqSection {
+    padding: 80px 20px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .question {
+    font-size: 1.1rem;
+  }
+}

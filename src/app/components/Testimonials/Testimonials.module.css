@@ -1,0 +1,151 @@
+/* src/components/Testimonials/Testimonials.module.css (VERSÃO CINEMATOGRÁFICA) */
+
+.testimonialsSection {
+  padding: 140px 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+.backgroundEffect {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f8f9fa 80%);
+  opacity: 0.8;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 40px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 30px 60px -20px rgba(13, 27, 42, 0.15);
+  border: 1px solid #fff;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 66.66%; /* Proporção 3:2 */
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.imageFrame {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border: 1px solid rgba(13, 27, 42, 0.1);
+  z-index: 2;
+}
+
+.authorImage {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+}
+
+.quoteContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--primary-color);
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorName {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.authorTitle {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.progress {
+  display: flex;
+  gap: 8px;
+}
+
+.progressBar {
+  height: 4px;
+  width: 30px;
+  background-color: var(--border-color);
+  border-radius: 2px;
+  transition: background-color 0.4s ease;
+}
+.progressBar.active {
+  background-color: var(--primary-color);
+}
+
+.navButtons {
+  display: flex;
+  gap: 10px;
+}
+.navButton {
+  width: 45px; height: 45px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navButton:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    padding: 60px;
+  }
+  .imageContainer {
+    padding-top: 125%; /* Proporção mais vertical para desktop */
+  }
+}

@@ -1,0 +1,119 @@
+/* src/components/Audience/Audience.module.css (VERSÃO COM INTERAÇÃO INVERTIDA) */
+
+.audienceSection {
+  background-color: var(--primary-color);
+  background-image: radial-gradient(circle at 10% 20%, rgba(65, 90, 119, 0.2) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 30%);
+  color: var(--text-light);
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px; /* Aumenta um pouco o gap para o efeito 3D respirar */
+  max-width: 900px;
+  margin: 0 auto;
+  perspective: 1200px; /* Aumenta a perspectiva para um 3D mais sutil */
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+
+  /* MUDANÇA: Estado de repouso inclinado */
+  transform: rotateX(-10deg) rotateY(10deg);
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.card:hover {
+  /* No hover, o JS assume, mas podemos definir um box-shadow diferente */
+  box-shadow: 0px 0px 40px rgba(212, 175, 55, 0.2);
+}
+
+.card:hover .cardShine {
+  transform: translateX(200%) skewX(-30deg);
+}
+
+.cardShine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: transform 1s ease;
+}
+
+.cardContent {
+  text-align: center;
+}
+
+.iconWrapper {
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+/* --- Media Queries para Layout --- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .audienceSection {
+    padding: 80px 20px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  /* Em mobile, removemos a inclinação para evitar problemas de layout */
+  .card {
+    transform: none;
+  }
+}
