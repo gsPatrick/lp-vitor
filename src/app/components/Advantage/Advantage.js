@@ -1,4 +1,4 @@
-// src/components/Advantage/Advantage.js (VERSÃO FINAL COM DESIGN APRIMORADO)
+// src/components/Advantage/Advantage.js (VERSÃO FINAL COM MULTILÍNGUE)
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -8,7 +8,7 @@ import styles from './Advantage.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Advantage = () => {
+const Advantage = ({ dictionary }) => {
   const sectionRef = useRef(null);
   const imageWrapperRef = useRef(null);
   const contentRef = useRef(null);
@@ -64,6 +64,9 @@ const Advantage = () => {
     return () => ctx.revert();
   }, []);
 
+  // Previne erro caso o dicionário não seja carregado a tempo
+  if (!dictionary) return null;
+
   return (
     // O container da seção agora só serve de âncora posicional
     <section id="advantage" className={styles.advantageSectionWrapper}>
@@ -78,25 +81,19 @@ const Advantage = () => {
           <div className={styles.grid}>
             <div className={styles.content} ref={contentRef}>
               <h2 className={styles.title} ref={titleRef}>
-                <span className={styles.lineWrapper}><span>Your Keystone</span></span>
-                <span className={styles.lineWrapper}><span>Advantage</span></span>
+                <span className={styles.lineWrapper}><span>{dictionary.title_line1}</span></span>
+                <span className={styles.lineWrapper}><span>{dictionary.title_line2}</span></span>
               </h2>
               <p className={styles.text}>
-                We don't just manage numbers; we build financial frameworks that drive decisions. Our approach integrates technology, foresight, and strategic expertise to give you a competitive edge.
+                {dictionary.text}
               </p>
               <ul className={styles.benefitsList}>
-                <li className={styles.benefitItem}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="var(--accent-color)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span>Data-Driven Roadmaps for Growth</span>
-                </li>
-                <li className={styles.benefitItem}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="var(--accent-color)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span>Proactive Risk & Opportunity Analysis</span>
-                </li>
-                <li className={styles.benefitItem}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="var(--accent-color)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span>Direct Access to C-Level Expertise</span>
-                </li>
+                {dictionary.benefits.map((benefit, index) => (
+                  <li key={index} className={styles.benefitItem}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="var(--accent-color)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <span>{benefit}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className={styles.imageContainer}>

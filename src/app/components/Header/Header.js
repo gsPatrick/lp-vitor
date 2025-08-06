@@ -6,7 +6,7 @@ import Link from 'next/link';
 import anime from 'animejs';
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({ dictionary }) => {
   // Estado para controlar a sombra do header no scroll
   const [isScrolled, setIsScrolled] = useState(false);
   // Estado para controlar a abertura do menu mobile
@@ -75,6 +75,11 @@ const Header = () => {
     setIsMenuOpen(false);
   }
 
+  // Se o dicionário não estiver carregado, não renderiza nada para evitar erros.
+  if (!dictionary) {
+    return null;
+  }
+
   return (
     <header className={`${styles.headerContainer} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
@@ -85,19 +90,21 @@ const Header = () => {
 
           {/* Menu Desktop */}
           <ul className={styles.navLinks}>
-            <li><a href="#services" className={styles.navLinkItem}>Services</a></li>
-            <li><a href="#about" className={styles.navLinkItem}>About</a></li>
-            <li><a href="#testimonials" className={styles.navLinkItem}>Testimonials</a></li>
-            <li><a href="#faq" className={styles.navLinkItem}>FAQ</a></li>
+            {Object.keys(dictionary.nav).map((key) => (
+              <li key={key}>
+                <a href={`#${key}`} className={styles.navLinkItem}>
+                  {dictionary.nav[key]}
+                </a>
+              </li>
+            ))}
           </ul>
 
           <a 
-            href="https://wa.me/15551234567" 
-            target="_blank" 
+            href="#contact" // Link do botão principal
             className={styles.ctaButton}
             ref={ctaButtonRef}
           >
-            Get a Quote
+            {dictionary.cta_button}
           </a>
           
           {/* Botão Hamburger (Menu Mobile) */}
@@ -116,13 +123,16 @@ const Header = () => {
       {/* Overlay do Menu Mobile */}
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
         <ul className={styles.mobileNavLinks}>
-          <li><a href="#services" onClick={closeMenu}>Services</a></li>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
-          <li><a href="#testimonials" onClick={closeMenu}>Testimonials</a></li>
-          <li><a href="#faq" onClick={closeMenu}>FAQ</a></li>
+          {Object.keys(dictionary.nav).map((key) => (
+            <li key={`mobile-${key}`}>
+              <a href={`#${key}`} onClick={closeMenu}>
+                {dictionary.nav[key]}
+              </a>
+            </li>
+          ))}
           <li>
-            <a href="https://wa.me/15551234567" target="_blank" className={styles.mobileCta}>
-              Schedule a Consultation
+            <a href="#contact" className={styles.mobileCta} onClick={closeMenu}>
+              {dictionary.cta_button}
             </a>
           </li>
         </ul>

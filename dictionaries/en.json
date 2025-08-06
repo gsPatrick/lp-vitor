@@ -1,0 +1,196 @@
+{
+  "header": {
+    "nav": {
+      "services": "Services",
+      "about": "About",
+      "testimonials": "Testimonials",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "cta_button": "Schedule Consultation"
+  },
+  "hero": {
+    "headline_line1": "Unlock Your Financial",
+    "headline_line2": "Potential with Us",
+    "subheadline": "Strategic CFO services for ambitious global businesses. We navigate complexity, so you can focus on growth.",
+    "cta_button": "Schedule Your Strategic Consultation Now"
+  },
+  "painPoints": {
+    "title": "Are You Navigating a Financial Maze?",
+    "subtitle": "Many ambitious businesses hit the same roadblocks. We turn these common challenges into growth opportunities.",
+    "cards": [
+      {
+        "title": "Lack of Financial Clarity",
+        "description": "Struggling with complex spreadsheets and unclear reports? You're flying blind, making it impossible to see real-time profitability."
+      },
+      {
+        "title": "Inefficient Processes",
+        "description": "Are you or your team bogged down by manual financial tasks? This wasted time costs you money and focus on strategic growth."
+      },
+      {
+        "title": "Decisions Based on Hope",
+        "description": "Making critical business decisions without a solid financial forecast is a gamble. Avoid costly mistakes with data-driven insights."
+      }
+    ]
+  },
+  "advantage": {
+    "title_line1": "Your Keystone",
+    "title_line2": "Advantage",
+    "text": "We don't just manage numbers; we build financial frameworks that drive decisions. Our approach integrates technology, foresight, and strategic expertise to give you a competitive edge.",
+    "benefits": [
+      "Data-Driven Roadmaps for Growth",
+      "Proactive Risk & Opportunity Analysis",
+      "Direct Access to C-Level Expertise"
+    ]
+  },
+  "services": {
+    "title": "Our Core Services",
+    "subtitle": "A suite of tailored financial services designed to scale with your ambition.",
+    "link": "Learn More →",
+    "tabs": [
+      {
+        "title": "Fractional CFO Services",
+        "description": "Get C-level strategic guidance without the full-time executive cost. We integrate with your team to drive financial strategy, planning, and performance."
+      },
+      {
+        "title": "Financial Modeling & Forecasting",
+        "description": "Move beyond guesswork. We build robust, dynamic financial models that provide clear foresight for decision-making, fundraising, and strategic planning."
+      },
+      {
+        "title": "Cash Flow Management",
+        "description": "Cash is king. We optimize your cash conversion cycle, manage liquidity, and implement treasury strategies to ensure your business is resilient and capitalized for growth."
+      },
+      {
+        "title": "M&A and Transaction Advisory",
+        "description": "Navigate the complexities of buying or selling with confidence. We provide expert due diligence, valuation, and integration support to maximize transaction value."
+      }
+    ]
+  },
+  "aboutFounder": {
+    "tagline": "Meet the Visionary",
+    "name": "Florian Pass",
+    "bio": "With over 15 years of experience... Florian founded Financify with a single mission: to empower ambitious businesses with the C-level financial expertise they need to not just survive, but thrive on a global scale.",
+    "quote": "Financial strategy isn't about restriction; it's about enabling ambition."
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "nav_previous": "Previous",
+    "nav_next": "Next",
+    "items": [
+      {
+        "quote": "Working with Financify was a game-changer. Their strategic insights transformed our financial operations and unlocked growth we didn't think was possible.",
+        "name": "Sarah Johnson",
+        "title": "CEO, Tech Innovators Inc."
+      },
+      {
+        "quote": "The level of professionalism and expertise is unparalleled. Florian's team provided us with a clear financial roadmap that has been instrumental in our expansion into Europe.",
+        "name": "Michael Chen",
+        "title": "Founder, Global Exports Co."
+      },
+      {
+        "quote": "As a fast-growing startup, we needed more than just an accountant. We needed a strategic partner. Financify delivered exactly that, and more.",
+        "name": "Emily Rodriguez",
+        "title": "CTO, Creative Solutions"
+      }
+    ]
+  },
+  "audience": {
+    "title": "Designed for Visionaries",
+    "subtitle": "We thrive when partnering with leaders who are building the future.",
+    "profiles": [
+      {
+        "title": "Ambitious Startups",
+        "description": "Targeting rapid, sustainable scaling and preparing for Series A/B funding rounds."
+      },
+      {
+        "title": "Global Scale-Ups",
+        "description": "Established SMEs preparing for international expansion, market entry, or cross-border M&A."
+      },
+      {
+        "title": "Tech Companies",
+        "description": "SaaS, FinTech, and Deep Tech firms seeking strategic financial leadership to fuel innovation."
+      },
+      {
+        "title": "Complex Operations",
+        "description": "Businesses with sophisticated supply chains or multi-entity structures requiring expert oversight."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers to common questions. For anything else, we're just a message away.",
+    "items": [
+      {
+        "question": "What is a Fractional CFO?",
+        "answer": "A Fractional CFO is an experienced chief financial officer who works with businesses on a part-time, \"fractional\" basis. This provides you with C-level strategic expertise, financial oversight, and data-driven insights without the cost and commitment of a full-time executive salary."
+      },
+      {
+        "question": "How do you work with international clients?",
+        "answer": "Our team is fully remote and operates across multiple time zones. We leverage modern cloud-based accounting and communication tools to provide seamless, real-time collaboration regardless of your location in the US, Brazil, or Europe."
+      },
+      {
+        "question": "What size of business do you typically work with?",
+        "answer": "We specialize in partnering with ambitious companies, from high-growth startups seeking their first round of funding to established SMEs with annual revenues between $5M and $50M who are planning for major growth events."
+      },
+      {
+        "question": "How is this different from a standard accounting service?",
+        "answer": "Standard accounting focuses on historical data—recording transactions and ensuring compliance. We are forward-looking. We use your financial data to build strategic roadmaps, model future scenarios, and provide the insights you need to make proactive, informed decisions."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Your Journey to Financial Clarity Begins Now.",
+    "subtitle": "Stop guessing, start building. Let's craft the financial framework your ambition deserves.",
+    "button": "Schedule Your Strategic Consultation"
+  },
+  "ahk": {
+    "title": "Trusted by Global Institutions",
+    "text": "Florian Pass is an official member of the German-Brazilian Chamber of Commerce and Industry (AHK), a prestigious institution that fosters economic relations and business excellence between Germany and Brazil. This affiliation strengthens our international credibility and connects Keystone Consulting with a powerful network of global business leaders.",
+    "seal1_alt": "AHK Seal 1",
+    "seal2_alt": "AHK Seal 2"
+  },
+  "contact": {
+    "title": "Ready to Take the Next Step?",
+    "subtitle": "Choose your preferred way to connect. We look forward to hearing from you.",
+    "channels": [
+      {
+        "title": "Start a Conversation",
+        "contact": "contact@financify.com"
+      },
+      {
+        "title": "Schedule a Call",
+        "contact": "Book a Time Slot"
+      },
+      {
+        "title": "Connect Professionally",
+        "contact": "linkedin.com/in/financify"
+      }
+    ],
+    "arrow": "→"
+  },
+  "footer": {
+    "logo": "Financify",
+    "tagline": "Strategic financial guidance for a complex world.",
+    "navigate": {
+      "title": "Navigate",
+      "links": {
+        "services": "Services",
+        "about": "About",
+        "testimonials": "Testimonials",
+        "faq": "FAQ"
+      }
+    },
+    "legal": {
+      "title": "Legal",
+      "links": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "contact@financify.com"
+    },
+    "copyright": "© {year} Financify. All Rights Reserved."
+  }
+}

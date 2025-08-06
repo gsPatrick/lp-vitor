@@ -1,4 +1,4 @@
-// src/components/FAQ/FAQ.js (VERSÃO COMPLETA)
+// src/components/FAQ/FAQ.js
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -8,25 +8,9 @@ import styles from './FAQ.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const faqData = [
-  {
-    question: 'What is a Fractional CFO?',
-    answer: 'A Fractional CFO is an experienced chief financial officer who works with businesses on a part-time, "fractional" basis. This provides you with C-level strategic expertise, financial oversight, and data-driven insights without the cost and commitment of a full-time executive salary.',
-  },
-  {
-    question: 'How do you work with international clients?',
-    answer: 'Our team is fully remote and operates across multiple time zones. We leverage modern cloud-based accounting and communication tools to provide seamless, real-time collaboration regardless of your location in the US, Brazil, or Europe.',
-  },
-  {
-    question: 'What size of business do you typically work with?',
-    answer: 'We specialize in partnering with ambitious companies, from high-growth startups seeking their first round of funding to established SMEs with annual revenues between $5M and $50M who are planning for major growth events.',
-  },
-  {
-    question: 'How is this different from a standard accounting service?',
-    answer: 'Standard accounting focuses on historical data—recording transactions and ensuring compliance. We are forward-looking. We use your financial data to build strategic roadmaps, model future scenarios, and provide the insights you need to make proactive, informed decisions.',
-  },
-];
-
+// O componente filho 'FAQItem' não precisa saber sobre o dicionário.
+// Ele apenas renderiza os dados que recebe (item, isOpen, onToggle).
+// Nenhuma alteração é necessária aqui.
 const FAQItem = ({ item, isOpen, onToggle }) => {
   const contentRef = useRef(null);
 
@@ -55,13 +39,33 @@ const FAQItem = ({ item, isOpen, onToggle }) => {
   );
 };
 
-const FAQ = () => {
+
+// O componente principal agora recebe o 'dictionary'
+const FAQ = ({ dictionary }) => {
   const [openIndex, setOpenIndex] = useState(null);
   const sectionRef = useRef(null);
   const listRef = useRef(null);
+  const headerRef = useRef(null); // Ref para o cabeçalho
 
+  // Animações de entrada com GSAP (sem alterações na lógica)
   useEffect(() => {
+    // Adiciona uma verificação para garantir que os refs existem
+    if (!listRef.current || !headerRef.current) return;
+
     const ctx = gsap.context(() => {
+      // Animação do cabeçalho
+      gsap.from(headerRef.current.children, {
+        opacity: 0,
+        y: 40,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: 'top 85%',
+        }
+      });
+
       // Animação de revelação "wipe" dos itens
       const items = listRef.current.children;
       gsap.from(items, {
@@ -82,15 +86,22 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Verificação para evitar erro caso o dicionário ainda não tenha sido carregado
+  if (!dictionary || !dictionary.items) {
+    return null;
+  }
+
   return (
     <section id="faq" className={styles.faqSection} ref={sectionRef}>
       <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>Frequently Asked Questions</h2>
-          <p className={styles.subtitle}>Quick answers to common questions. For anything else, we're just a message away.</p>
+        <div className={styles.header} ref={headerRef}>
+          {/* Título e subtítulo agora vêm do dicionário */}
+          <h2 className={styles.title}>{dictionary.title}</h2>
+          <p className={styles.subtitle}>{dictionary.subtitle}</p>
         </div>
         <div className={styles.faqList} ref={listRef}>
-          {faqData.map((item, index) => (
+          {/* Mapeia os itens do dicionário em vez do array 'faqData' */}
+          {dictionary.items.map((item, index) => (
             <FAQItem
               key={index}
               item={item}

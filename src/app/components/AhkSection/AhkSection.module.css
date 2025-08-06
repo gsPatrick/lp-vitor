@@ -1,0 +1,109 @@
+/* src/components/AhkSection/AhkSection.module.css (VERSÃO DE IMPACTO) */
+
+.ahkSection {
+  /* MUDANÇA: Fundo escuro para criar drama e destacar os selos. */
+  background-color: var(--primary-color);
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Efeito de vinheta para focar a atenção no centro */
+.ahkSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 150px rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  /* MUDANÇA: Cor do texto para fundos escuros. */
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.text {
+  /* MUDANÇA: Cor do texto para fundos escuros. */
+  color: var(--text-light);
+  opacity: 0.8;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.sealsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Garante que os cards tenham a mesma altura */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* NOVO LAYOUT: O "Pedestal de Vidro" para o selo */
+.sealPedestal {
+  flex-basis: 320px;
+  padding: 40px;
+  border-radius: 12px;
+  
+  /* EFEITO DE VIDRO: Fundo semi-transparente com desfoque */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sealPedestal:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.sealImage {
+  /* Mantém o tamanho grande */
+  height: 155px;
+  object-fit: contain;
+  /* Garante que a imagem não seja afetada por filtros de cor */
+  filter: none;
+  opacity: 1;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+  .ahkSection {
+    padding: 80px 20px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .sealPedestal {
+    flex-basis: 100%;
+    padding: 30px;
+  }
+  .sealImage {
+    height: 120px;
+  }
+}

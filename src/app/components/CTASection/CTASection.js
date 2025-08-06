@@ -1,4 +1,4 @@
-// src/components/CTASection/CTASection.js (VERSÃO COM ANIMAÇÃO ACELERADA)
+// src/components/CTASection/CTASection.js
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -9,64 +9,66 @@ import styles from './CTASection.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CTASection = () => {
+const CTASection = ({ dictionary }) => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const ctaButtonRef = useRef(null);
 
   useEffect(() => {
+    // É importante que esta lógica rode apenas quando o titleRef estiver preenchido com os spans
+    // e o ctaButtonRef estiver disponível.
+    if (!titleRef.current || !ctaButtonRef.current) return;
+    
     const titleChars = titleRef.current.querySelectorAll('span');
-
+    const subtitle = sectionRef.current.querySelector(`.${styles.subtitle}`);
+    const shockwave = ctaButtonRef.current.querySelector(`.${styles.shockwave}`);
+    
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 60%', // Inicia um pouco mais cedo
+        start: 'top 60%',
         toggleActions: 'play none none reverse',
       },
     });
 
-    // 1. Animação de entrada do fundo (mais rápida)
     tl.from(sectionRef.current, {
       '--spotlight-size': '0%',
-      duration: 0.8, // DURAÇÃO AJUSTADA
+      duration: 0.8,
       ease: 'power2.inOut',
     });
 
-    // 2. Animação de construção do título (mais rápida)
-    tl.from(titleChars, {
-      duration: 0.6, // DURAÇÃO AJUSTADA
-      opacity: 0,
-      scale: 0.8,
-      filter: 'blur(5px)',
-      stagger: {
-        each: 0.03, // DURAÇÃO AJUSTADA
-        from: 'center',
-      },
-      ease: 'power2.out',
-    }, "-=0.5");
+    if (titleChars.length > 0) {
+      tl.from(titleChars, {
+        duration: 0.6,
+        opacity: 0,
+        scale: 0.8,
+        filter: 'blur(5px)',
+        stagger: {
+          each: 0.03,
+          from: 'center',
+        },
+        ease: 'power2.out',
+      }, "-=0.5");
+    }
     
-    // 3. Animação do subtítulo (mais rápida)
-    tl.from(`.${styles.subtitle}`, {
-        opacity: 0, y: 20, duration: 0.6, ease: 'power2.out' // DURAÇÃO AJUSTADA
+    tl.from(subtitle, {
+        opacity: 0, y: 20, duration: 0.6, ease: 'power2.out'
     }, "-=0.3");
 
-    // 4. Animação de aterrissagem do botão (mais impactante)
     tl.from(ctaButtonRef.current, {
       scale: 0.6,
       opacity: 0,
-      duration: 1.2, // Mantém a duração elástica para impacto
-      ease: 'elastic.out(1, 0.4)', // Elasticidade ajustada
+      duration: 1.2,
+      ease: 'elastic.out(1, 0.4)',
     }, "-=0.4");
     
-    // 5. Animação da "onda de choque" (mais rápida)
-    tl.from(ctaButtonRef.current.querySelector(`.${styles.shockwave}`), {
+    tl.from(shockwave, {
         scale: 0,
         opacity: 1,
-        duration: 0.5, // DURAÇÃO AJUSTADA
+        duration: 0.5,
         ease: 'power2.out'
-    }, "-=1.0"); // Acontece mais próximo da aterrissagem do botão
+    }, "-=1.0");
 
-    // Efeito de hover no botão com Anime.js (sem alterações)
     const button = ctaButtonRef.current;
     if (button) {
         const mouseEnterHandler = () => {
@@ -84,29 +86,32 @@ const CTASection = () => {
         }
     }
 
-  }, []);
+  }, [dictionary]); // Adiciona dictionary como dependência para re-renderizar quando o idioma mudar
 
-  const titleText = "Your Journey to Financial Clarity Begins Now.";
+  // Evita renderizar se o dicionário não estiver pronto
+  if (!dictionary) {
+    return null;
+  }
   
   return (
     <section id="cta" className={styles.ctaSection} ref={sectionRef}>
       <div className={styles.vignette}></div>
       <div className={`container ${styles.container}`}>
         <h2 className={styles.title} ref={titleRef}>
-          {titleText.split('').map((char, index) => (
+          {/* O texto do título agora vem do dicionário */}
+          {dictionary.title.split('').map((char, index) => (
             <span key={index}>{char === ' ' ? '\u00A0' : char}</span>
           ))}
         </h2>
         <p className={styles.subtitle}>
-          Stop guessing, start building. Let's craft the financial framework your ambition deserves.
+          {dictionary.subtitle}
         </p>
         <a
-          href="https://wa.me/15551234567"
-          target="_blank"
+          href="#contact" // Link pode ser ajustado se necessário
           className={styles.ctaButton}
           ref={ctaButtonRef}
         >
-          Schedule Your Strategic Consultation
+          {dictionary.button}
           <div className={styles.shockwave}></div>
         </a>
       </div>

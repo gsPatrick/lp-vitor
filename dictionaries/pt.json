@@ -1,0 +1,196 @@
+{
+  "header": {
+    "nav": {
+      "services": "Serviços",
+      "about": "Sobre",
+      "testimonials": "Depoimentos",
+      "faq": "FAQ",
+      "contact": "Contato"
+    },
+    "cta_button": "Agendar Consultoria"
+  },
+  "hero": {
+    "headline_line1": "Desbloqueie o Potencial",
+    "headline_line2": "Financeiro da Sua Empresa",
+    "subheadline": "Serviços de CFO estratégico para empresas globais ambiciosas. Nós navegamos pela complexidade para que você possa focar no crescimento.",
+    "cta_button": "Agende Sua Consultoria Estratégica Agora"
+  },
+  "painPoints": {
+    "title": "Você está Navegando em um Labirinto Financeiro?",
+    "subtitle": "Muitas empresas ambiciosas enfrentam os mesmos obstáculos. Transformamos esses desafios comuns em oportunidades de crescimento.",
+    "cards": [
+      {
+        "title": "Falta de Clareza Financeira",
+        "description": "Tomando decisões de milhões com informações de mil reais. Seus relatórios estão desatualizados ou imprecisos, te deixando no escuro."
+      },
+      {
+        "title": "Caos no Fluxo de Caixa",
+        "description": "A receita aumenta, mas o dinheiro some. Você não sabe quando entra ou sai. Todo mês é uma surpresa ruim."
+      },
+      {
+        "title": "Sempre Apagando Incêndios",
+        "description": "Ao invés de planejar estrategicamente, você está sempre reagindo. Quando vê o problema, ele já te custou caro."
+      }
+    ]
+  },
+  "advantage": {
+    "title_line1": "Sua Vantagem",
+    "title_line2": "Keystone",
+    "text": "Não apenas organizamos seus números – construímos a estrutura que transforma sua empresa em líder do setor. Nossa abordagem integra tecnologia, visão de futuro e expertise estratégica para lhe dar uma vantagem competitiva.",
+    "benefits": [
+      "Liderança Estratégica, Não Apenas Contabilidade",
+      "Análise Proativa de Riscos e Oportunidades",
+      "Acesso Direto à Expertise de Nível C"
+    ]
+  },
+  "services": {
+    "title": "Nossos Serviços Principais",
+    "subtitle": "Um conjunto de serviços financeiros sob medida, projetados para escalar com sua ambição.",
+    "link": "Saiba Mais →",
+    "tabs": [
+      {
+        "title": "CFO Fracionado",
+        "description": "Tenha orientação estratégica de nível C sem o custo de um executivo em tempo integral. Integramo-nos à sua equipe para impulsionar a estratégia, o planejamento e o desempenho financeiro."
+      },
+      {
+        "title": "Controller Financeiro",
+        "description": "Relatórios precisos e pontuais. Oferecemos demonstrativos mensais, análise de variação, previsão de fluxo de caixa e conformidade com padrões contábeis."
+      },
+      {
+        "title": "Otimização de Fluxo de Caixa",
+        "description": "Transforme o caos do fluxo de caixa em uma gestão previsível e positiva. Otimizamos seu ciclo de conversão, gerenciamos a liquidez e implementamos estratégias para garantir a resiliência do seu negócio."
+      },
+      {
+        "title": "Análise e Otimização do DRE",
+        "description": "Mapeamos a lucratividade por produto ou divisão, otimizamos custos e margens, e identificamos oportunidades para melhorar os fluxos de receita com clareza total."
+      }
+    ]
+  },
+  "aboutFounder": {
+    "tagline": "Conheça o Visionário",
+    "name": "Florian Pass",
+    "bio": "Com 25 anos de experiência internacional (EUA, Brasil, Europa), Florian fundou a Financify com uma única missão: capacitar empresas ambiciosas com a expertise financeira de nível C de que precisam para não apenas sobreviver, mas prosperar em escala global.",
+    "quote": "Eu já vi o que separa empresas que escalam com sucesso daquelas que quebram – não é sorte. É ter a base certa no momento certo."
+  },
+  "testimonials": {
+    "title": "O Que Nossos Clientes Dizem",
+    "nav_previous": "Anterior",
+    "nav_next": "Próximo",
+    "items": [
+      {
+        "quote": "\"Antes da Keystone, tomávamos decisões com base em feeling e dados velhos. Agora temos inteligência financeira em tempo real. Crescemos 40% e ainda melhoramos nossas margens.\"",
+        "name": "Sarah Chen",
+        "title": "CEO, TechFlow Solutions"
+      },
+      {
+        "quote": "\"Florian não apenas organizou a contabilidade – ele criou uma estratégia que nos permitiu escalar com confiança. Saímos do sufoco mensal para o planejamento por trimestre.\"",
+        "name": "Marcus Rodriguez",
+        "title": "Fundador, Rodriguez Construction Group"
+      },
+      {
+        "quote": "\"Ter a Keystone é como ter um CFO de classe mundial no WhatsApp. O nível de visão e orientação é incomparável.\"",
+        "name": "Jennifer Walsh",
+        "title": "Sócia, Walsh & Associates Legal"
+      }
+    ]
+  },
+  "audience": {
+    "title": "Projetado para Visionários",
+    "subtitle": "Prosperamos ao fazer parceria com líderes que estão construindo o futuro.",
+    "profiles": [
+      {
+        "title": "Startups Ambiciosas",
+        "description": "Mirando em escalabilidade rápida e sustentável e preparando-se para rodadas de financiamento Série A/B."
+      },
+      {
+        "title": "Scale-ups Globais",
+        "description": "PMEs estabelecidas que se preparam para expansão internacional, entrada em novos mercados ou fusões e aquisições."
+      },
+      {
+        "title": "Empresas de Tecnologia",
+        "description": "SaaS, FinTech e Deep Tech que buscam liderança financeira estratégica para impulsionar a inovação."
+      },
+      {
+        "title": "Operações Complexas",
+        "description": "Negócios com cadeias de suprimentos sofisticadas ou estruturas multi-entidades que exigem supervisão especializada."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Respostas rápidas para perguntas comuns. Para qualquer outra coisa, estamos a apenas uma mensagem de distância.",
+    "items": [
+      {
+        "question": "Como isso é diferente do meu contador?",
+        "answer": "Contadores lidam com impostos e conformidade, funções essenciais mas que olham para o passado. Nós trazemos visão de futuro, planejamento e estratégia de crescimento proativa."
+      },
+      {
+        "question": "Quando vejo resultados?",
+        "answer": "A maioria dos clientes vê melhorias imediatas na clareza financeira em até 30 dias. Melhorias estratégicas no fluxo de caixa e na lucratividade geralmente mostram resultados mensuráveis em 90 dias."
+      },
+      {
+        "question": "É mais barato que contratar um CFO?",
+        "answer": "Sim. Um CFO pleno experiente custa acima de R$ 1 milhão/ano mais benefícios. Nossos serviços fracionados entregam o mesmo nível de expertise e valor estratégico por uma fração desse investimento."
+      },
+      {
+        "question": "Vocês ajudam empresas em expansão internacional?",
+        "answer": "Com certeza. Com nossa experiência internacional, estamos posicionados de forma única para apoiar empresas dos EUA em expansão global, particularmente para os mercados da América Latina."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Sua Jornada Para a Clareza Financeira Começa Agora.",
+    "subtitle": "Pare de adivinhar, comece a construir. Vamos criar a estrutura financeira que sua ambição merece.",
+    "button": "Agende Sua Consultoria Estratégica"
+  },
+  "ahk": {
+    "title": "Confiado por Instituições Globais",
+    "text": "Florian Pass é membro oficial da Câmara de Comércio e Indústria Brasil-Alemanha (AHK), uma instituição de prestígio que promove relações econômicas e excelência empresarial entre os dois países. Essa afiliação fortalece nossa credibilidade internacional e conecta a Keystone Consulting com uma poderosa rede de líderes de negócios globais.",
+    "seal1_alt": "Selo AHK 1",
+    "seal2_alt": "Selo AHK 2"
+  },
+  "contact": {
+    "title": "Pronto para Dar o Próximo Passo?",
+    "subtitle": "Escolha a sua forma preferida de se conectar. Estamos ansiosos para ouvir de você.",
+    "channels": [
+      {
+        "title": "Inicie uma Conversa",
+        "contact": "contato@financify.com.br"
+      },
+      {
+        "title": "Agende uma Chamada",
+        "contact": "Reservar um Horário"
+      },
+      {
+        "title": "Conecte-se Profissionalmente",
+        "contact": "linkedin.com/in/financify"
+      }
+    ],
+    "arrow": "→"
+  },
+  "footer": {
+    "logo": "Financify",
+    "tagline": "Orientação financeira estratégica para um mundo complexo.",
+    "navigate": {
+      "title": "Navegue",
+      "links": {
+        "services": "Serviços",
+        "about": "Sobre",
+        "testimonials": "Depoimentos",
+        "faq": "FAQ"
+      }
+    },
+    "legal": {
+      "title": "Legal",
+      "links": {
+        "privacy": "Política de Privacidade",
+        "terms": "Termos de Serviço"
+      }
+    },
+    "contact": {
+      "title": "Contato",
+      "email": "contato@financify.com.br"
+    },
+    "copyright": "© {year} Financify. Todos os direitos reservados."
+  }
+}

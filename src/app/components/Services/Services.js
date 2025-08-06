@@ -1,4 +1,4 @@
-// src/components/Services/Services.js (VERSÃO FINAL REIMAGINADA)
+// src/components/Services/Services.js (VERSÃO FINAL REIMAGINADA E MULTILÍNGUE)
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -8,15 +8,10 @@ import styles from './Services.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// O conteúdo permanece o mesmo
-const servicesData = [
-    { title: 'Fractional CFO Services', description: 'Get C-level strategic guidance without the full-time executive cost. We integrate with your team to drive financial strategy, planning, and performance.' },
-    { title: 'Financial Modeling & Forecasting', description: 'Move beyond guesswork. We build robust, dynamic financial models that provide clear foresight for decision-making, fundraising, and strategic planning.' },
-    { title: 'Cash Flow Management', description: 'Cash is king. We optimize your cash conversion cycle, manage liquidity, and implement treasury strategies to ensure your business is resilient and capitalized for growth.' },
-    { title: 'M&A and Transaction Advisory', description: 'Navigate the complexities of buying or selling with confidence. We provide expert due diligence, valuation, and integration support to maximize transaction value.' },
-];
+// REMOVIDO: O array servicesData não é mais necessário aqui.
+// Os dados agora virão do 'dictionary'.
 
-const Services = () => {
+const Services = ({ dictionary }) => {
   const [activeService, setActiveService] = useState(0);
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
@@ -27,6 +22,11 @@ const Services = () => {
   const contentTitleRef = useRef(null);
   const contentDescRef = useRef(null);
   const contentLinkRef = useRef(null);
+
+  // Se o dicionário não estiver carregado, evita renderizar com erro.
+  if (!dictionary || !dictionary.tabs) {
+    return null;
+  }
 
   const handleTabClick = (index) => {
     if (index === activeService || gsap.isTweening(contentViewerRef.current)) return;
@@ -83,10 +83,14 @@ const Services = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(titleRef.current.children, {
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
-          opacity: 0, y: 50, stagger: 0.2, duration: 0.8, ease: 'power3.out',
-      });
+      // Animação de entrada do título (sem alterações na lógica)
+      if (titleRef.current) {
+        gsap.from(titleRef.current.children, {
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
+            opacity: 0, y: 50, stagger: 0.2, duration: 0.8, ease: 'power3.out',
+        });
+      }
+      // Animação de entrada dos blocos de conteúdo (sem alterações na lógica)
        gsap.from(`.${styles.tabs}, .${styles.contentViewer}`, {
           scrollTrigger: { trigger: sectionRef.current, start: 'top 60%' },
           opacity: 0, y: 50, duration: 1, ease: 'power3.out',
@@ -95,20 +99,23 @@ const Services = () => {
     return () => ctx.revert();
   }, []);
 
-  const currentService = servicesData[activeService];
+  // Seleciona o serviço atual a partir do dicionário
+  const currentService = dictionary.tabs[activeService];
 
   return (
     <section id="services" className={styles.servicesSection} ref={sectionRef}>
       <div className="container">
         <div className={styles.header} ref={titleRef}>
-          <h2 className={styles.title}>Our Core Services</h2>
-          <p className={styles.subtitle}>A suite of tailored financial services designed to scale with your ambition.</p>
+          {/* Título e subtítulo agora vêm do dicionário */}
+          <h2 className={styles.title}>{dictionary.title}</h2>
+          <p className={styles.subtitle}>{dictionary.subtitle}</p>
         </div>
 
         <div className={styles.grid}>
           <div className={styles.tabs}>
             <div className={styles.indicator} ref={indicatorRef}></div>
-            {servicesData.map((service, index) => (
+            {/* Mapeia os serviços a partir do dicionário */}
+            {dictionary.tabs.map((service, index) => (
               <div
                 key={index}
                 ref={(el) => (tabsRef.current[index] = el)}
@@ -122,9 +129,10 @@ const Services = () => {
           </div>
           <div className={styles.contentViewer} ref={contentViewerRef}>
             <div className={styles.contentWrapper}>
+                {/* O conteúdo do visualizador é preenchido com o serviço ativo do dicionário */}
                 <h3 ref={contentTitleRef} className={styles.contentTitle}>{currentService.title}</h3>
                 <p ref={contentDescRef} className={styles.contentDescription}>{currentService.description}</p>
-                <a ref={contentLinkRef} href="#cta" className={styles.contentLink}>Learn More →</a>
+                <a ref={contentLinkRef} href="#cta" className={styles.contentLink}>{dictionary.link}</a>
             </div>
           </div>
         </div>

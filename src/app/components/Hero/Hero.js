@@ -9,13 +9,18 @@ import styles from './Hero.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = () => {
+const Hero = ({ dictionary }) => {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
   const ctaButtonRef = useRef(null);
   const headlineRef = useRef(null);
   const subheadlineRef = useRef(null);
   const scrollArrowRef = useRef(null);
+
+    // Verifica se o dicionário foi carregado
+    if (!dictionary) {
+      return null; // Ou renderize um estado de carregamento, se desejar
+    }
 
   useEffect(() => {
     // --- Animação de Entrada ---
@@ -104,11 +109,11 @@ const Hero = () => {
 
       <div className={styles.heroContent} ref={contentRef}>
         <h1 className={styles.headline} ref={headlineRef}>
-          <span className={styles.lineWrapper}><span>Unlock Your Financial</span></span>
-          <span className={styles.lineWrapper}><span>Potential with Us</span></span>
+          <span className={styles.lineWrapper}><span>{dictionary.headline_line1}</span></span>
+          <span className={styles.lineWrapper}><span>{dictionary.headline_line2}</span></span>
         </h1>
         <p className={styles.subheadline} ref={subheadlineRef}>
-          Strategic CFO services for ambitious global businesses. We navigate complexity, so you can focus on growth.
+          {dictionary.subheadline}
         </p>
         <a
           href="https://wa.me/15551234567"
@@ -116,7 +121,7 @@ const Hero = () => {
           className={styles.ctaButton}
           ref={ctaButtonRef}
         >
-          Schedule Your Strategic Consultation Now
+          {dictionary.cta_button}
         </a>
       </div>
 
