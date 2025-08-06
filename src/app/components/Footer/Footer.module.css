@@ -1,4 +1,4 @@
-/* src/components/Footer/Footer.module.css (VERSÃO COMPLETA) */
+/* src/components/Footer/Footer.module.css (ATUALIZADO PARA RESPONSIVIDADE) */
 
 .footer {
   background-color: var(--primary-color);
@@ -8,8 +8,10 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas em mobile */
-  gap: 40px 20px;
+  /* ALTERAÇÃO: Mudado de 'repeat(2, 1fr)' para '1fr'. 
+     Isso força o grid a ter apenas UMA coluna em telas menores (mobile), empilhando tudo. */
+  grid-template-columns: 1fr;
+  gap: 40px 20px; /* O gap de coluna (20px) agora não terá efeito, mas mantemos por clareza */
   padding-bottom: 60px;
   border-bottom: 1px solid var(--secondary-color);
   max-width: var(--max-width);
@@ -17,8 +19,11 @@
 }
 
 .brandColumn {
-  grid-column: span 2; /* Ocupa as 2 colunas em mobile */
+  /* ALTERAÇÃO: Mudado de 'span 2' para 'span 1', pois agora só há uma coluna. */
+  grid-column: span 1;
   text-align: center;
+  /* ALTERAÇÃO: Adicionada uma margem inferior para separar a marca das colunas de links no mobile. */
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -94,6 +99,7 @@
 }
 
 /* --- Media Query para Desktop --- */
+/* Esta seção permanece IGUAL. Ela sobrescreve os estilos mobile em telas maiores. */
 @media (min-width: 992px) {
   .grid {
     grid-template-columns: 2fr 1fr 1fr 1fr; /* Layout de 4 colunas */
