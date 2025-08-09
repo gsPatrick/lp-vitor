@@ -1,4 +1,4 @@
-/* src/components/Header/Header.module.css (ATUALIZADO) */
+/* src/components/Header/Header.module.css (ATUALIZADO PARA IMAGEM) */
 
 .headerContainer {
   position: fixed;
@@ -6,13 +6,13 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: transparent; /* Fundo transparente inicialmente */
+  background-color: transparent;
   padding: 20px 0;
   transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease, padding var(--transition-speed) ease;
 }
 
 .headerContainer.scrolled {
-  background-color: #ffffff; /* Fundo branco no scroll */
+  background-color: #ffffff;
   padding: 15px 0;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
@@ -29,16 +29,34 @@
   align-items: center;
 }
 
-/* Estado inicial (sobre o Hero) */
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-light); /* Texto branco */
-  transition: color var(--transition-speed) ease;
+/* ===== NOVOS ESTILOS PARA O LOGO ===== */
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: auto; /* Mantém a proporção da imagem */
+  transition: filter var(--transition-speed) ease;
+  /* Por padrão, a logo é escura. O filtro a tornará branca. */
+  filter: brightness(0) invert(1); 
+}
+
+/* Ao rolar, removemos o filtro para mostrar a logo em sua cor original (escura) */
+.headerContainer.scrolled .logoImage {
+  filter: none;
+}
+/* ====================================== */
+
+
+.navLinks {
+  display: none;
+  list-style: none;
+  gap: 30px;
 }
 
 .navLinkItem {
-  color: var(--text-light); /* Texto branco */
+  color: var(--text-light);
   opacity: 0.8;
   font-weight: 500;
   position: relative;
@@ -47,7 +65,7 @@
 }
 
 .menuToggle span {
-  background: var(--text-light); /* Ícone do menu branco */
+  background: var(--text-light);
   width: 30px;
   height: 3px;
   border-radius: 10px;
@@ -55,25 +73,16 @@
 }
 
 /* Estado com scroll (.scrolled) */
-.headerContainer.scrolled .logo,
 .headerContainer.scrolled .navLinkItem {
-  color: var(--primary-color); /* Texto escuro */
-}
-.headerContainer.scrolled .navLinkItem {
+  color: var(--primary-color);
   opacity: 1;
 }
 .headerContainer.scrolled .menuToggle span {
-  background: var(--primary-color); /* Ícone do menu escuro */
+  background: var(--primary-color);
 }
+
 
 /* --- Restante do CSS permanece similar --- */
-
-.navLinks {
-  display: none;
-  list-style: none;
-  gap: 30px;
-}
-
 .navLinkItem::after {
   content: '';
   position: absolute;
@@ -86,7 +95,6 @@
 }
 
 .navLinkItem:hover {
-  color: var(--accent-color);
   opacity: 1;
 }
 .headerContainer.scrolled .navLinkItem:hover {
@@ -126,16 +134,9 @@
   z-index: 1001;
 }
 
-/* Animação do Hamburger para "X" */
-.menuToggle.open span:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
-}
-.menuToggle.open span:nth-child(2) {
-  opacity: 0;
-}
-.menuToggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
+.menuToggle.open span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
+.menuToggle.open span:nth-child(2) { opacity: 0; }
+.menuToggle.open span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
 
 .mobileMenu {
   position: fixed;
@@ -151,41 +152,13 @@
   align-items: center;
   justify-content: center;
 }
-
-.mobileMenu.open {
-  right: 0;
-}
-
-.mobileNavLinks {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 40px;
-}
-
-.mobileNavLinks a {
-  color: var(--text-light);
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.mobileCta {
-  background-color: var(--accent-color);
-  color: var(--primary-color) !important;
-  padding: 12px 24px;
-  border-radius: var(--border-radius);
-  font-weight: bold;
-}
+.mobileMenu.open { right: 0; }
+.mobileNavLinks { list-style: none; display: flex; flex-direction: column; text-align: center; gap: 40px; }
+.mobileNavLinks a { color: var(--text-light); font-size: 1.2rem; font-weight: 500; }
+.mobileCta { background-color: var(--accent-color); color: var(--primary-color) !important; padding: 12px 24px; border-radius: var(--border-radius); font-weight: bold; }
 
 @media (min-width: 769px) {
-  .menuToggle {
-    display: none;
-  }
-  .navLinks {
-    display: flex;
-  }
-  .ctaButton {
-    display: inline-block;
-  }
+  .menuToggle { display: none; }
+  .navLinks { display: flex; }
+  .ctaButton { display: inline-block; }
 }

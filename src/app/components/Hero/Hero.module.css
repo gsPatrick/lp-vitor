@@ -1,24 +1,14 @@
-/* src/components/Hero/Hero.module.css (ATUALIZADO) */
+/* src/components/Hero/Hero.module.css (VERSÃO FINAL COM ESTILO REFINADO) */
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
 
 @keyframes bob {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
 }
 
 .heroSection {
@@ -35,27 +25,16 @@
 
 .videoBackground {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
 }
 
 .videoBackground video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.05); /* Leve zoom para um look mais premium */
+  width: 100%; height: 100%; object-fit: cover; transform: scale(1.05);
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Gradiente sutil para escurecer mais na base e no topo */
+  top: 0; left: 0; width: 100%; height: 100%;
   background: linear-gradient(to bottom, rgba(13, 27, 42, 0.8) 0%, rgba(13, 27, 42, 0.5) 50%, rgba(13, 27, 42, 0.8) 100%);
   z-index: 2;
 }
@@ -63,28 +42,51 @@
 .heroContent {
   position: relative;
   z-index: 3;
-  max-width: 900px;
+  max-width: 950px; /* Leve aumento para dar mais espaço */
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Tamanho GERAL do container do título. Controla a fonte da linha PRINCIPAL. */
 .headline {
-  font-size: 3rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  /* Sombra para fazer o texto "saltar" da tela */
+  line-height: 1.15; /* Mais apertado para unir as linhas */
+  margin-bottom: 25px; /* Menos espaço até o subtítulo */
   text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
   color: white;
+  
+  /* TAMANHO BASE (PT): Reduzido para proporção */
+  font-size: 3.8rem; 
 }
 
-.lineWrapper {
-  display: block;
-  overflow: hidden;
-  padding: 2px 0;
+/* ================== NOVA HIERARQUIA E ESTILIZAÇÃO ================== */
+
+/* ESTILO DA PRIMEIRA LINHA (LEAD-IN) */
+.headline_line1 {
+  font-size: 0.6em; /* Tamanho relativo à fonte do .headline (ex: 60%) */
+  font-weight: 500; /* Menos pesado */
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+  display: block; /* Garante que fique em sua própria linha */
+  margin-bottom: 8px; /* Pequeno espaço entre as linhas */
 }
+
+/* Não precisamos de regras para a .headline_line2, ela herda o estilo do .headline */
+
+/* ============ AJUSTES DE TAMANHO POR IDIOMA (REDUZIDOS) =========== */
+
+.headline_en {
+  font-size: 2.8rem; 
+}
+
+.headline_de {
+  font-size: 2.9rem;
+}
+
+/* ==================================================================== */
+
 .lineWrapper span {
   display: block;
 }
@@ -92,9 +94,9 @@
 .subheadline {
   font-size: 1.2rem;
   font-weight: 400;
-  max-width: 600px;
+  max-width: 650px;
   margin-bottom: 40px;
-  line-height: 1.6;
+  line-height: 1.7;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   opacity: 0.9;
 }
@@ -107,21 +109,19 @@
   font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 1px; /* Espaçamento aumentado para um look premium */
+  letter-spacing: 1px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  /* Animação de pulso para chamar atenção */
   animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
 }
 
 .ctaButton:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-  animation: none; /* Pausa a animação de pulso no hover */
+  animation: none;
 }
 
-/* Estilos para a Seta de Scroll */
 .scrollDownArrow {
   position: absolute;
   bottom: 30px;
@@ -138,28 +138,28 @@
 }
 
 .scrollDownArrow svg {
-  width: 30px;
-  height: 30px;
+  width: 30px; height: 30px;
 }
 
-@media (min-width: 768px) {
-  .headline {
-    font-size: 5rem;
-  }
-  .subheadline {
-    font-size: 1.3rem;
-  }
+/* ========= MEDIA QUERIES COM OS NOVOS TAMANHOS PROPORCIONAIS ========= */
+
+@media (max-width: 992px) {
+  .headline { font-size: 3.2rem; }
+  .headline_en { font-size: 2.5rem; }
+  .headline_de { font-size: 2.6rem; }
+}
+
+@media (max-width: 768px) {
+  .headline { font-size: 2.8rem; }
+  .headline_en { font-size: 2.2rem; }
+  .headline_de { font-size: 2.3rem; }
+  .subheadline { font-size: 1.1rem; }
 }
 
 @media (max-width: 480px) {
-  .headline {
-    font-size: 2.5rem;
-  }
-  .subheadline {
-    font-size: 1rem;
-  }
-  .ctaButton {
-    padding: 15px 30px;
-    font-size: 0.9rem;
-  }
+  .headline { font-size: 2.4rem; }
+  .headline_en { font-size: 1.9rem; }
+  .headline_de { font-size: 2.0rem; }
+  .subheadline { font-size: 1rem; }
+  .ctaButton { padding: 15px 30px; font-size: 0.9rem; }
 }

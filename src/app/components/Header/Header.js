@@ -1,98 +1,80 @@
-// src/components/Header/Header.js
+// src/components/Header/Header.js (COM LOGO REDUZIDA)
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import anime from 'animejs';
 import styles from './Header.module.css';
 
 const Header = ({ dictionary }) => {
-  // Estado para controlar a sombra do header no scroll
   const [isScrolled, setIsScrolled] = useState(false);
-  // Estado para controlar a abertura do menu mobile
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
   const ctaButtonRef = useRef(null);
 
-  // Efeito para adicionar e remover o event listener de scroll
   useEffect(() => {
     const handleScroll = () => {
-      // Adiciona a sombra se o scroll for maior que 10px
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    // Função de limpeza: remove o listener quando o componente é desmontado
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []); // O array vazio garante que o efeito rode apenas uma vez (montagem/desmontagem)
-
-  // Efeito para a animação do botão com anime.js
   useEffect(() => {
     const button = ctaButtonRef.current;
     if (!button) return;
-
-    const handleMouseEnter = () => {
-      anime({
-        targets: button,
-        scale: [1, 1.05],
-        translateZ: 0,
-        duration: 300,
-        easing: 'easeOutElastic(1, .8)'
-      });
-    };
-
-    const handleMouseLeave = () => {
-      anime({
-        targets: button,
-        scale: [1.05, 1],
-        translateZ: 0,
-        duration: 200,
-        easing: 'easeOutQuad'
-      });
-    };
-
-    button.addEventListener('mouseenter', handleMouseEnter);
-    button.addEventListener('mouseleave', handleMouseLeave);
-
+    const mouseEnter = () => anime({ targets: button, scale: [1, 1.05], translateZ: 0, duration: 300, easing: 'easeOutElastic(1, .8)' });
+    const mouseLeave = () => anime({ targets: button, scale: [1.05, 1], translateZ: 0, duration: 200, easing: 'easeOutQuad' });
+    button.addEventListener('mouseenter', mouseEnter);
+    button.addEventListener('mouseleave', mouseLeave);
     return () => {
-      button.removeEventListener('mouseenter', handleMouseEnter);
-      button.removeEventListener('mouseleave', handleMouseLeave);
+      button.removeEventListener('mouseenter', mouseEnter);
+      button.removeEventListener('mouseleave', mouseLeave);
     };
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const handleNavClick = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    closeMenu();
   };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  }
-
-  // Se o dicionário não estiver carregado, não renderiza nada para evitar erros.
-  if (!dictionary) {
-    return null;
-  }
+  if (!dictionary) return null;
 
   return (
     <header className={`${styles.headerContainer} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <nav className={styles.nav}>
-          <Link href="/" className={styles.logo}>
-            Financify
+          <Link href="/" className={styles.logoLink}>
+            {/* ===== MUDANÇA AQUI: Dimensões da logo reduzidas ===== */}
+            <Image
+              src="/images/logo.png"
+              alt="Financify Logo"
+              width={120} // Reduzido de 140
+              height={34}  // Reduzido de 40 para manter a proporção
+              priority
+              className={styles.logoImage}
+            />
+            {/* ======================================================= */}
           </Link>
 
-          {/* Menu Desktop */}
           <ul className={styles.navLinks}>
             {Object.keys(dictionary.nav).map((key) => (
               <li key={key}>
-                <a href={`#${key}`} className={styles.navLinkItem}>
+                <a 
+                  href={`#${key}`} 
+                  onClick={(e) => handleNavClick(e, `#${key}`)}
+                  className={styles.navLinkItem}
+                >
                   {dictionary.nav[key]}
                 </a>
               </li>
@@ -100,14 +82,14 @@ const Header = ({ dictionary }) => {
           </ul>
 
           <a 
-            href="#contact" // Link do botão principal
+            href="#assessment-form"
+            onClick={(e) => handleNavClick(e, '#assessment-form')}
             className={styles.ctaButton}
             ref={ctaButtonRef}
           >
             {dictionary.cta_button}
           </a>
           
-          {/* Botão Hamburger (Menu Mobile) */}
           <button 
             className={`${styles.menuToggle} ${isMenuOpen ? styles.open : ''}`} 
             onClick={toggleMenu}
@@ -120,18 +102,21 @@ const Header = ({ dictionary }) => {
         </nav>
       </div>
       
-      {/* Overlay do Menu Mobile */}
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
         <ul className={styles.mobileNavLinks}>
           {Object.keys(dictionary.nav).map((key) => (
             <li key={`mobile-${key}`}>
-              <a href={`#${key}`} onClick={closeMenu}>
+              <a href={`#${key}`} onClick={(e) => handleNavClick(e, `#${key}`)}>
                 {dictionary.nav[key]}
               </a>
             </li>
           ))}
           <li>
-            <a href="#contact" className={styles.mobileCta} onClick={closeMenu}>
+            <a 
+              href="#assessment-form" 
+              className={styles.mobileCta} 
+              onClick={(e) => handleNavClick(e, '#assessment-form')}
+            >
               {dictionary.cta_button}
             </a>
           </li>

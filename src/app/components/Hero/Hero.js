@@ -1,4 +1,4 @@
-// src/components/Hero/Hero.js (ATUALIZADO)
+// src/components/Hero/Hero.js (ATUALIZADO COM HIERARQUIA)
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -9,7 +9,7 @@ import styles from './Hero.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = ({ dictionary }) => {
+const Hero = ({ dictionary, lang }) => {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
   const ctaButtonRef = useRef(null);
@@ -17,18 +17,16 @@ const Hero = ({ dictionary }) => {
   const subheadlineRef = useRef(null);
   const scrollArrowRef = useRef(null);
 
-    // Verifica se o dicionário foi carregado
     if (!dictionary) {
-      return null; // Ou renderize um estado de carregamento, se desejar
+      return null;
     }
 
   useEffect(() => {
-    // --- Animação de Entrada ---
+    // A lógica de animação permanece a mesma
     const timeline = gsap.timeline({
       defaults: { ease: 'power4.out', duration: 1.5 }
     });
     
-    // Animação de texto mais CINEMATOGRÁFICA
     timeline.fromTo(headlineRef.current.children, {
       y: '120%',
       skewY: 7,
@@ -58,7 +56,6 @@ const Hero = ({ dictionary }) => {
       "-=0.5"
     );
 
-    // --- Animação Parallax no Scroll ---
     gsap.to(contentRef.current, {
       yPercent: -40,
       opacity: 0,
@@ -71,25 +68,10 @@ const Hero = ({ dictionary }) => {
       },
     });
     
-    // --- Animação Hover do Botão CTA com Anime.js ---
     const button = ctaButtonRef.current;
     if (button) {
-      const handleMouseEnter = () => {
-        anime({
-          targets: button,
-          scale: 1.05,
-          duration: 300,
-          easing: 'easeOutQuad'
-        });
-      };
-      const handleMouseLeave = () => {
-        anime({
-          targets: button,
-          scale: 1,
-          duration: 300,
-          easing: 'easeOutQuad'
-        });
-      };
+      const handleMouseEnter = () => { anime({ targets: button, scale: 1.05, duration: 300, easing: 'easeOutQuad' }); };
+      const handleMouseLeave = () => { anime({ targets: button, scale: 1, duration: 300, easing: 'easeOutQuad' }); };
       button.addEventListener('mouseenter', handleMouseEnter);
       button.addEventListener('mouseleave', handleMouseLeave);
       return () => {
@@ -100,7 +82,6 @@ const Hero = ({ dictionary }) => {
   }, []);
 
   return (
-    // IMPORTANTE: Adicione o ID aqui para que os links do menu funcionem
     <section id="hero" className={styles.heroSection} ref={heroRef}>
       <div className={styles.videoBackground}>
         <video autoPlay loop muted playsInline src="/videos/hero-background.mp4" />
@@ -108,9 +89,18 @@ const Hero = ({ dictionary }) => {
       <div className={styles.overlay}></div>
 
       <div className={styles.heroContent} ref={contentRef}>
-        <h1 className={styles.headline} ref={headlineRef}>
-          <span className={styles.lineWrapper}><span>{dictionary.headline_line1}</span></span>
-          <span className={styles.lineWrapper}><span>{dictionary.headline_line2}</span></span>
+        <h1 
+          className={`${styles.headline} ${lang === 'en' ? styles.headline_en : ''} ${lang === 'de' ? styles.headline_de : ''}`} 
+          ref={headlineRef}
+        >
+          {/* ===== MUDANÇA AQUI: Adicionamos classes para cada linha ===== */}
+          <span className={`${styles.lineWrapper} ${styles.headline_line1}`}>
+            <span>{dictionary.headline_line1}</span>
+          </span>
+          <span className={`${styles.lineWrapper} ${styles.headline_line2}`}>
+            <span>{dictionary.headline_line2}</span>
+          </span>
+          {/* ============================================================= */}
         </h1>
         <p className={styles.subheadline} ref={subheadlineRef}>
           {dictionary.subheadline}
@@ -125,7 +115,6 @@ const Hero = ({ dictionary }) => {
         </a>
       </div>
 
-      {/* Seta de Scroll para baixo */}
       <a href="#pain-points" className={styles.scrollDownArrow} ref={scrollArrowRef} aria-label="Scroll down">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <polyline points="7 13 12 18 17 13"></polyline>

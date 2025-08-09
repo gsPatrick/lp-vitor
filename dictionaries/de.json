@@ -1,8 +1,8 @@
 {
   "header": {
     "nav": {
-      "services": "Leistungen",
-      "about": "Über uns",
+      "services": "Kerndienstleistungen",
+      "about": "Über den Gründer",
       "testimonials": "Kundenstimmen",
       "faq": "FAQ",
       "contact": "Kontakt"
@@ -10,14 +10,14 @@
     "cta_button": "Beratung Vereinbaren"
   },
   "hero": {
-    "headline_line1": "Finanzführung auf C-Level-Niveau,",
-    "headline_line2": "ohne die vollen Kosten",
-    "subheadline": "Was wäre, wenn ein international erfahrener CFO Ihre Finanzstrategie zu einem Bruchteil der Kosten leiten könnte?",
+    "headline_line1": "Verwandeln Sie Ihr wachsendes Unternehmen in eine Kraft",
+    "headline_line2": "der Wertschöpfung für Aktionäre.",
+    "subheadline": "Beenden Sie den Blindflug bei Ihren Finanzen – erhalten Sie Finanzführung auf C-Level-Niveau ohne das Preisschild eines Vollzeit-CFOs. Was wäre, wenn ein international erfahrener CFO Ihre Finanzstrategie zu einem Bruchteil der Kosten leiten könnte?",
     "cta_button": "Strategieberatung Jetzt Vereinbaren"
   },
   "painPoints": {
-    "title": "Die verborgene Krise, die Ihr Wachstum bremst",
-    "subtitle": "Viele ambitionierte Unternehmen stoßen auf dieselben Hindernisse. Wir verwandeln diese Herausforderungen in Wachstumschancen.",
+    "title": "Die Verborgene Krise, Die Wachstumsunternehmen Ruiniert",
+    "subtitle": "Millionenentscheidungen basierend auf unvollständigen Informationen. Ihre aktuellen Berichte sind entweder veraltet oder unzuverlässig.",
     "cards": [
       {
         "title": "Sie wachsen blind",
@@ -28,19 +28,19 @@
         "description": "Umsatz steigt, aber Geld bleibt knapp. Jeder Monat ist ein finanzielles Überraschungsfest – leider kein gutes."
       },
       {
-        "title": "Unsichtbare Wachstumssperre",
-        "description": "Ihr aktuelles Finanzsystem hält schnelles Wachstum nicht aus – eine Expansion fühlt sich riskant an."
+        "title": "Ständiges Krisenmanagement",
+        "description": "Reaktive statt strategischer Planung. Probleme kosten Sie schon jetzt Zeit und Geld."
       }
     ]
   },
   "advantage": {
-    "title_line1": "Ihr Keystone-",
-    "title_line2": "Vorteil",
-    "text": "Wir reparieren nicht nur Ihre Zahlen – wir schaffen die Infrastruktur, um Ihr Unternehmen an die Spitze zu bringen. Unser Ansatz integriert Technologie, Weitblick und strategische Expertise, um Ihnen einen Wettbewerbsvorteil zu verschaffen.",
+    "title_line1": "Der Keystone-Vorteil:",
+    "title_line2": "Finanzielle Klarheit, die echtes Wachstum antreibt",
+    "text": "Wir reparieren nicht nur Ihre Zahlen – wir schaffen die Infrastruktur, um Ihr Unternehmen an die Spitze zu bringen.",
     "benefits": [
       "Strategische Finanzführung statt einfacher Buchhaltung",
-      "Proaktive Problemerkennung zur Vermeidung von Fehlern",
-      "Zugang zum vollständigen C-Level-Team ohne Overhead"
+      "Finanzielle Echtzeit-Einblicke",
+      "Proaktive Problemerkennung"
     ]
   },
   "services": {
@@ -50,30 +50,37 @@
     "tabs": [
       {
         "title": "Chief Financial Officer Services",
-        "description": "Erhalten Sie strategische Führung auf C-Level ohne die Kosten einer Vollzeitstelle. Wir integrieren uns in Ihr Team, um Finanzstrategie, Planung und Performance zu steuern."
+        "description": "Finanzstrategie & Planung angepasst an Ihre Ziele. Vorstandsgeeignete Finanzberichte. Entscheidungsunterstützung bei großen Veränderungen. Risikomanagement & Compliance."
       },
       {
         "title": "Financial Controller Solutions",
-        "description": "Verlässliche, zeitgerechte Finanzberichte, denen Sie vertrauen können. Wir kümmern uns um Monatsabschlüsse, Abweichungsanalysen und GAAP-Konformität."
+        "description": "Verlässliche, zeitgerechte Finanzberichte. Monatsabschlüsse & Abweichungsanalysen. Cashflow-Prognosen & Steuerung. Interne Kontrollen & Prozessoptimierung. GAAP-Konformität."
       },
       {
         "title": "Cashflow-Optimierung",
-        "description": "Bargeld ist König. Wir optimieren Ihren Cash-Conversion-Cycle, steuern die Liquidität und sichern Ihr Unternehmen für zukünftiges Wachstum ab."
+        "description": "Vorhersagbares Cashflow-Management. Modellierung & Prognosen. Working Capital Strategien. Zahlungsbedingungen & Kontoabwicklung. Prävention und Notfallplanung."
       },
       {
         "title": "P&L-Analyse & Optimierung",
-        "description": "Wir analysieren die Rentabilität nach Segment, optimieren Kostenstrukturen und Margen und identifizieren neue Einnahmequellen, um Ihre Profitabilität zu steigern."
+        "description": "Rentabilitätsanalyse nach Segment. Kostenstruktur & Marge optimieren. Umsatzströme verbessern. Break-Even & Szenarienplanung."
       }
     ]
   },
-  "aboutFounder": {
-    "tagline": "Ihr strategischer Finanzpartner",
-    "name": "Florian Pass",
-    "bio": "Als Fractional CFO & Strategieberater mit 25 Jahren globaler Erfahrung (USA, Schottland, Deutschland, Brasilien) bringt Florian die Expertise von Großunternehmen zu wachsenden Firmen. Seine Kenntnisse in US GAAP, SOX und IFRS sind entscheidend für international agierende Unternehmen.",
-    "quote": "Erfolg entsteht nicht durch Glück, sondern durch eine starke Finanzbasis und klare Strategie."
-  },
+"aboutFounder": {
+  "tagline": "Ihr Strategischer Finanzpartner",
+  "name": "Florian Pass",
+  "bio_intro": "Fractional CFO & Strategieberater mit 25 Jahren globaler Erfahrung (USA, Schottland, Deutschland, Brasilien).",
+  "bio_highlights_title": "Warum Florian für Ihr Unternehmen entscheidend ist:",
+  "bio_highlights": [
+    "US GAAP-Experte für US-konforme Finanzberichte",
+    "SOX-Erfahrung für börsennotierte Standards",
+    "IFRS-Kenntnisse für globale Operationen",
+    "Führung großer, interdisziplinärer Teams"
+  ],
+      "quote": "Erfolg entsteht nicht durch Glück, sondern durch eine starke Finanzbasis und klare Strategie."
+},
   "testimonials": {
-    "title": "Was unsere Kunden sagen",
+    "title": "Kundenstimmen",
     "nav_previous": "Zurück",
     "nav_next": "Weiter",
     "items": [
@@ -96,101 +103,107 @@
   },
   "audience": {
     "title": "Für wen ist das?",
-    "subtitle": "Wir unterstützen ambitionierte Unternehmen aus allen Branchen, die bereit sind, strukturiert zu wachsen.",
+    "subtitle": "Wir unterstützen ambitionierte Unternehmen, die bereit sind, strukturiert zu wachsen:",
     "profiles": [
       {
         "title": "Industrie & Produktion",
-        "description": "Mittelständische Unternehmen, die bereit sind, Abläufe zu optimieren und international zu expandieren."
+        "description": ""
       },
       {
-        "title": "Dienstleistungsfirmen",
-        "description": "Beratungsfirmen, Kanzleien und Agenturen, die ohne Rentabilitäts- oder Qualitätsverluste skalieren müssen."
+        "title": "Dienstleistungsfirmen (Beratung, Kanzleien, Agenturen)",
+        "description": ""
       },
       {
-        "title": "Gesundheitssektor",
-        "description": "Unternehmen, die strikte Compliance und finanzielle Führung benötigen, während sie ihr Wachstum beibehalten."
+        "title": "Gesundheitssektor & medizinische Organisationen",
+        "description": ""
       },
       {
-        "title": "Bau & E-Commerce",
-        "description": "Wachsende Marken, die ein anspruchsvolles Bestandsmanagement und internationale Expansionsstrategien benötigen."
+        "title": "E-Commerce & Einzelhandel mit Expansionsplänen",
+        "description": ""
       }
     ]
   },
   "faq": {
     "title": "Häufige Fragen",
-    "subtitle": "Schnelle Antworten auf häufige Fragen. Für alles Weitere sind wir nur eine Nachricht entfernt.",
+    "subtitle": "Schnelle Antworten auf häufige Fragen.",
     "items": [
       {
         "question": "Wie unterscheidet sich das von meinem aktuellen Buchhalter?",
-        "answer": "Ihr Buchhalter kümmert sich um Compliance und Steuererklärungen. Wir bieten vorausschauende, strategische Finanzführung, Echtzeit-Einblicke und proaktive Planung, die das Wachstum vorantreibt."
+        "answer": "Wir bieten proaktive Führung und strategische Erkenntnisse – nicht nur Steuererklärungen."
+      },
+      {
+        "question": "Was ist im Service enthalten?",
+        "answer": "Monatsberichte, Cashflow-Management, KPI-Tracking, Strategieplanung, Zugang zu Experten u.v.m."
       },
       {
         "question": "Wann sehe ich Ergebnisse?",
-        "answer": "Die meisten Kunden sehen innerhalb von 30 Tagen eine unmittelbare Verbesserung der finanziellen Klarheit. Strategische Verbesserungen bei Cashflow und Rentabilität zeigen in der Regel innerhalb von 90 Tagen messbare Ergebnisse."
+        "answer": "Meist innerhalb von 30 Tagen. Spürbare Resultate in 90 Tagen."
       },
       {
         "question": "Ist das günstiger als ein Vollzeit-CFO?",
-        "answer": "Absolut. Ein erfahrener CFO in den USA kostet jährlich über 200.000 bis 400.000 US-Dollar. Unsere Fractional Services bieten das gleiche Maß an Fachwissen und strategischem Wert für einen Bruchteil dieser Investition."
-      },
-      {
-        "question": "Arbeiten Sie mit international expandierenden Unternehmen?",
-        "answer": "Ja. Mit unserer internationalen Erfahrung und unserem Netzwerk sind wir einzigartig positioniert, um US-Unternehmen bei der globalen Expansion zu unterstützen, insbesondere in lateinamerikanische Märkte."
+        "answer": "Ein Top-CFO kostet $200K-$400K jährlich. Unsere Leistungen liefern den gleichen Wert – zu einem Bruchteil."
       }
     ]
   },
   "cta": {
     "title": "Bereit für Ihre Finanztransformation?",
-    "subtitle": "Hören Sie auf, kritische Geschäftsentscheidungen im Dunkeln zu treffen. Die Unternehmen, die im Wachstum erfolgreich sind, haben die stärkste finanzielle Grundlage und die klarste strategische Vision.",
+    "subtitle": "Beenden Sie Entscheidungen im Dunkeln. Jeden Tag ohne Klarheit verlieren Sie Chancen. Erfolgreiche Unternehmen bauen zuerst ihre Finanzbasis.",
     "button": "Ihren individuellen Finanzfahrplan entdecken"
   },
   "ahk": {
     "title": "Vertrauenswürdig für globale Institutionen",
-    "text": "Florian Pass ist offizielles Mitglied der Deutsch-Brasilianischen Industrie- und Handelskammer (AHK), eine angesehene Institution zur Förderung von Wirtschaft und Geschäft zwischen Deutschland und Brasilien. Diese Mitgliedschaft stärkt unsere internationale Glaubwürdigkeit und verbindet Keystone Consulting mit einem starken Netzwerk globaler Wirtschaftsführer.",
-    "seal1_alt": "AHK Siegel 1",
-    "seal2_alt": "AHK Siegel 2"
+    "text": "Florian Pass ist offizielles Mitglied der Deutsch-Brasilianischen Industrie- und Handelskammer (AHK), eine angesehene Institution zur Förderung von Wirtschaft und Geschäft zwischen Deutschland und Brasilien.",
+    "seal1_alt": "SIEGEL AHK 1",
+    "seal2_alt": "SIEGEL AHK 2"
+  },
+"contact": {
+  "title": "Bereit, das finanzielle Potenzial Ihres Unternehmens zu entfalten?",
+  "subtitle": "Wählen Sie Ihren bevorzugten Weg, um mit uns in Kontakt zu treten.",
+  "channels": [
+    {
+      "title": "E-Mail",
+      "contact": "florian@meetkeystone.com",
+      "link": "mailto:florian@meetkeystone.com"
+    },
+    {
+      "title": "Telefon",
+      "contact": "+55 (11) 97285-5566",
+      "link": "tel:+5511972855566"
+    },
+    {
+      "title": "WhatsApp",
+      "contact": "Schnelle Antwort bei dringenden Fragen",
+      "link": "https://wa.me/5511972855566"
+    }
+  ],
+  "arrow": "→"
+},
+"footer": {
+  "logo": "Keystone Consulting",
+  "tagline": "Finanzielle Klarheit für ambitionierte Unternehmen.",
+  "navigate": {
+    "title": "Navigation",
+    "links": {
+      "services": "Leistungen",
+      "about": "Über Uns",
+      "testimonials": "Kundenstimmen",
+      "faq": "FAQ"
+    }
+  },
+  "legal": {
+    "title": "Rechtliches",
+    "links": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen"
+    }
   },
   "contact": {
-    "title": "Bereit, Ihr finanzielles Potenzial freizusetzen?",
-    "subtitle": "Wählen Sie Ihren bevorzugten Weg, um mit uns in Kontakt zu treten. Wir freuen uns, von Ihnen zu hören.",
-    "channels": [
-      {
-        "title": "Gespräch beginnen",
-        "contact": "florian@meetkeystone.com"
-      },
-      {
-        "title": "Anruf planen",
-        "contact": "Einen Termin buchen"
-      },
-      {
-        "title": "Professionell vernetzen",
-        "contact": "LinkedIn"
-      }
-    ],
-    "arrow": "→"
+    "title": "Kontakt",
+    "email": "florian@meetkeystone.com",
+    "phone": "+55 (11) 97285-5566",
+    "global_reach_title": "Globale Reichweite",
+    "global_reach_text": "Nordamerika, Europa und Lateinamerika"
   },
-  "footer": {
-    "logo": "Financify",
-    "tagline": "Strategische Finanzführung für eine komplexe Welt.",
-    "navigate": {
-      "title": "Navigation",
-      "links": {
-        "services": "Leistungen",
-        "about": "Über Uns",
-        "testimonials": "Kundenstimmen",
-        "faq": "FAQ"
-      }
-    },
-    "legal": {
-      "title": "Rechtliches",
-      "links": {
-        "privacy": "Datenschutzrichtlinie",
-        "terms": "Nutzungsbedingungen"
-      }
-    },
-    "contact": {
-      "title": "Kontakt",
-      "email": "florian@meetkeystone.com"
-    },
-    "copyright": "© {year} Financify. Alle Rechte vorbehalten."
-  }
+  "copyright": "© {year} Keystone Consulting. Alle Rechte vorbehalten."
+}
 }

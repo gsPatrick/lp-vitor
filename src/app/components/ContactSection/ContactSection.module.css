@@ -1,4 +1,4 @@
-/* src/components/ContactSection/ContactSection.module.css (VERSÃO COM CARDS) */
+/* src/components/ContactSection/ContactSection.module.css (Inalterado) */
 
 .contactSection {
   background-color: var(--background-color);
@@ -29,7 +29,7 @@
   gap: 30px;
   max-width: var(--max-width);
   margin: 0 auto;
-  perspective: 1000px; /* Habilita o espaço 3D para os cards */
+  perspective: 1000px;
 }
 
 .card {

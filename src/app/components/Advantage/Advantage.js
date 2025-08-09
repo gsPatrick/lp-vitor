@@ -1,4 +1,4 @@
-// src/components/Advantage/Advantage.js (VERSÃO FINAL COM MULTILÍNGUE)
+// src/components/Advantage/Advantage.js (COM HIERARQUIA ADICIONADA)
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -25,65 +25,36 @@ const Advantage = ({ dictionary }) => {
         },
       });
 
-      // Animação da imagem
-      tl.from(imageWrapperRef.current, {
-        scale: 1.1,
-        filter: 'blur(10px)',
-        opacity: 0,
-        duration: 1.2,
-        ease: 'power3.inOut',
-      });
-      
-      // Animação da moldura da imagem (linhas)
-      tl.from(frameRef.current.children, {
-        scaleX: 0,
-        transformOrigin: 'left center',
-        stagger: 0.1,
-        duration: 0.8,
-        ease: 'power2.out'
-      }, "-=0.8");
-
-      // Animação do texto
-      tl.from(titleRef.current.querySelectorAll('span>span'), {
-        y: '110%',
-        skewY: 5,
-        duration: 1,
-        stagger: 0.2,
-        ease: 'power4.out',
-      }, "-=1.2") // Sobrepõe para começar junto com a imagem
-      .from(contentRef.current.querySelectorAll(`.${styles.text}, .${styles.benefitItem}`), {
-        opacity: 0,
-        y: 30,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power3.out',
-      }, "-=0.8");
+      tl.from(imageWrapperRef.current, { scale: 1.1, filter: 'blur(10px)', opacity: 0, duration: 1.2, ease: 'power3.inOut' });
+      tl.from(frameRef.current.children, { scaleX: 0, transformOrigin: 'left center', stagger: 0.1, duration: 0.8, ease: 'power2.out' }, "-=0.8");
+      tl.from(titleRef.current.querySelectorAll('span>span'), { y: '110%', skewY: 5, duration: 1, stagger: 0.2, ease: 'power4.out' }, "-=1.2")
+        .from(contentRef.current.querySelectorAll(`.${styles.text}, .${styles.benefitItem}`), { opacity: 0, y: 30, stagger: 0.15, duration: 0.8, ease: 'power3.out' }, "-=0.8");
 
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
-  // Previne erro caso o dicionário não seja carregado a tempo
   if (!dictionary) return null;
 
   return (
-    // O container da seção agora só serve de âncora posicional
     <section id="advantage" className={styles.advantageSectionWrapper}>
-      {/* NOVO: Divisor Curvo para a transição */}
       <div className={styles.curvedDivider}></div>
-      
       <div className={styles.advantageSection} ref={sectionRef}>
-        {/* NOVO: Forma geométrica de fundo */}
         <div className={styles.backgroundShape}></div>
-
         <div className={`container ${styles.container}`}>
           <div className={styles.grid}>
             <div className={styles.content} ref={contentRef}>
+              {/* ===== MUDANÇA AQUI: Adicionamos classes para cada linha do título ===== */}
               <h2 className={styles.title} ref={titleRef}>
-                <span className={styles.lineWrapper}><span>{dictionary.title_line1}</span></span>
-                <span className={styles.lineWrapper}><span>{dictionary.title_line2}</span></span>
+                <span className={`${styles.lineWrapper} ${styles.title_line1}`}>
+                  <span>{dictionary.title_line1}</span>
+                </span>
+                <span className={`${styles.lineWrapper} ${styles.title_line2}`}>
+                  <span>{dictionary.title_line2}</span>
+                </span>
               </h2>
+              {/* ========================================================================= */}
               <p className={styles.text}>
                 {dictionary.text}
               </p>
@@ -98,10 +69,8 @@ const Advantage = ({ dictionary }) => {
             </div>
             <div className={styles.imageContainer}>
               <div className={styles.imageWrapper} ref={imageWrapperRef}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/images/advantage-image.jpg" alt="Strategic financial planning meeting" className={styles.image}/>
               </div>
-              {/* NOVO: A moldura de design para a imagem */}
               <div className={styles.imageFrame} ref={frameRef}>
                 <div className={`${styles.frameLine} ${styles.top}`}></div>
                 <div className={`${styles.frameLine} ${styles.bottom}`}></div>

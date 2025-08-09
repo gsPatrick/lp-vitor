@@ -7,14 +7,16 @@
 }
 
 .ctaSection {
+  /* Variável para a animação do holofote */
   --spotlight-size: 100%;
   
   background-color: var(--primary-color);
-  padding: 160px 20px; /* Aumenta o padding vertical da seção */
+  padding: 160px 20px; /* Mais padding vertical */
   text-align: center;
   position: relative;
   overflow: hidden;
   
+  /* Efeito de Holofote (Spotlight) */
   background-image: radial-gradient(
     circle at 50% 30%,
     rgba(255, 255, 255, 0.08) 0%,
@@ -36,14 +38,14 @@
 }
 
 .title {
-  font-size: 4.5rem; /* Título ainda maior para equilibrar */
+  font-size: 4rem; /* Título grande, mas proporcional */
   font-weight: 700;
   color: #fff;
   line-height: 1.15;
   margin-bottom: 30px;
 }
 .title span {
-  display: inline-block;
+  display: inline-block; /* Necessário para as animações individuais */
 }
 
 .subtitle {
@@ -51,7 +53,7 @@
   color: var(--text-light);
   opacity: 0.8;
   max-width: 650px;
-  margin: 0 auto 80px auto; /* MUITO mais espaço para o botão */
+  margin: 0 auto 80px auto; /* MAIS espaço para o botão respirar */
   line-height: 1.7;
 }
 
@@ -63,29 +65,29 @@
   color: var(--primary-color);
   
   /* Escala massiva */
-  width: 100%;
-  max-width: 700px; /* Limita a largura máxima em telas grandes */
-  padding: 32px 40px; 
-  border-radius: 16px;
-  font-size: 2rem; 
-  font-weight: 800; /* Mais peso na fonte */
+  padding: 28px 40px; 
+  border-radius: 12px;
+  font-size: 1.5rem; 
+  font-weight: 700;
   
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-decoration: none;
-  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 20px 50px -10px rgba(212, 175, 55, 0.4);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
   will-change: transform;
   
+  /* Animação de pulso contínua para chamar atenção */
   animation: pulse 2.2s infinite;
 }
 
 .ctaButton:hover {
-  animation-play-state: paused;
-  transform: translateY(-12px) scale(1.03); /* Hover mais pronunciado */
-  box-shadow: 0 30px 60px rgba(212, 175, 55, 0.6);
+  animation-play-state: paused; /* Pausa o pulso no hover */
+  transform: translateY(-10px) scale(1.03); /* Hover mais pronunciado */
+  box-shadow: 0 30px 60px -10px rgba(212, 175, 55, 0.5);
 }
 
+/* A onda de choque que anima na entrada */
 .shockwave {
   position: absolute;
   top: 50%;
@@ -93,23 +95,18 @@
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
-  border-radius: 16px;
-  border: 4px solid var(--accent-color);
+  border-radius: 12px;
+  border: 3px solid var(--accent-color);
   opacity: 0;
   pointer-events: none;
 }
 
-/* Ajustes responsivos para a nova escala */
+/* Ajustes responsivos */
 @media (max-width: 992px) {
     .title {
         font-size: 3.5rem;
     }
-    .ctaButton {
-        max-width: 600px;
-        font-size: 1.8rem;
-    }
 }
-
 
 @media (max-width: 768px) {
   .ctaSection {
@@ -123,9 +120,8 @@
     margin-bottom: 60px;
   }
   .ctaButton {
-    max-width: 100%; /* Ocupa toda a largura disponível */
-    padding: 28px 30px;
-    font-size: 1.5rem;
+    padding: 24px 30px;
+    font-size: 1.2rem;
   }
 }
 
@@ -134,7 +130,7 @@
         font-size: 2.4rem;
     }
     .ctaButton {
-        padding: 24px 20px;
-        font-size: 1.2rem;
+        padding: 20px 24px;
+        font-size: 1rem;
     }
 }

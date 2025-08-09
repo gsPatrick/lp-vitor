@@ -10,187 +10,214 @@
     "cta_button": "Schedule Consultation"
   },
   "hero": {
-    "headline_line1": "Unlock Your Financial",
-    "headline_line2": "Potential with Us",
-    "subheadline": "Strategic CFO services for ambitious global businesses. We navigate complexity, so you can focus on growth.",
-    "cta_button": "Schedule Your Strategic Consultation Now"
+    "headline_line1": "Transform Your Growing Business Into A Powerhouse Of Shareholder Value Creation",
+    "headline_line2": "Stop Flying Blind With Your Finances – Get C-Level Financial Leadership Without the C-Level Price Tag",
+    "subheadline": "What if you could have an internationally experienced CFO guiding your financial strategy for a fraction of the cost of hiring one full-time?",
+    "cta_button": "Get Your Strategic Financial Assessment"
   },
   "painPoints": {
-    "title": "Are You Navigating a Financial Maze?",
-    "subtitle": "Many ambitious businesses hit the same roadblocks. We turn these common challenges into growth opportunities.",
+    "title": "The Hidden Crisis Killing Growing Businesses",
+    "subtitle": "",
     "cards": [
       {
-        "title": "Lack of Financial Clarity",
-        "description": "Struggling with complex spreadsheets and unclear reports? You're flying blind, making it impossible to see real-time profitability."
+        "title": "You're Growing Blind",
+        "description": "Making million-dollar decisions with thousand-dollar insights. Your current financial reports are either weeks behind or completely unreliable, leaving you to guess where your business really stands."
       },
       {
-        "title": "Inefficient Processes",
-        "description": "Are you or your team bogged down by manual financial tasks? This wasted time costs you money and focus on strategic growth."
+        "title": "Cash Flow Chaos Rules Your Life",
+        "description": "Revenue is up, but money is tight. You can't predict when cash will come in or where it's going out. Every month feels like a financial surprise party – and not in a good way."
       },
       {
-        "title": "Decisions Based on Hope",
-        "description": "Making critical business decisions without a solid financial forecast is a gamble. Avoid costly mistakes with data-driven insights."
+        "title": "You're Always Fighting Fires",
+        "description": "Instead of strategic planning, you're constantly reacting to financial emergencies. By the time you spot a problem, it's already cost you thousands in lost opportunities or emergency fixes."
+      },
+      {
+        "title": "You've Hit an Invisible Growth Ceiling",
+        "description": "You want to scale, but your current financial infrastructure can't support it. Taking on more business feels risky because you don't have the financial foundation to handle rapid growth safely."
       }
     ]
   },
   "advantage": {
-    "title_line1": "Your Keystone",
-    "title_line2": "Advantage",
-    "text": "We don't just manage numbers; we build financial frameworks that drive decisions. Our approach integrates technology, foresight, and strategic expertise to give you a competitive edge.",
+    "title_line1": "The Keystone Advantage:",
+    "title_line2": "Financial Clarity That Drives Real Growth",
+    "text": "We don't just fix your numbers – we build the financial infrastructure that transforms growing businesses into industry leaders.",
     "benefits": [
-      "Data-Driven Roadmaps for Growth",
-      "Proactive Risk & Opportunity Analysis",
-      "Direct Access to C-Level Expertise"
+      "Strategic Financial Leadership, Not Just Bookkeeping",
+      "Real-Time Financial Intelligence",
+      "Proactive Problem Prevention",
+      "Complete C-Level Team Access",
+      "Scalable Financial Foundation"
     ]
   },
   "services": {
-    "title": "Our Core Services",
-    "subtitle": "A suite of tailored financial services designed to scale with your ambition.",
+    "title": "Our Core Services: Where Strategy Meets Execution",
+    "subtitle": "",
     "link": "Learn More →",
     "tabs": [
       {
-        "title": "Fractional CFO Services",
-        "description": "Get C-level strategic guidance without the full-time executive cost. We integrate with your team to drive financial strategy, planning, and performance."
+        "title": "Chief Financial Officer Services",
+        "description": "Strategic financial leadership that drives growth. Financial strategy and planning aligned with your business goals. Board-ready financial reporting and analysis. Strategic decision support for major business moves. Risk management and compliance oversight."
       },
       {
-        "title": "Financial Modeling & Forecasting",
-        "description": "Move beyond guesswork. We build robust, dynamic financial models that provide clear foresight for decision-making, fundraising, and strategic planning."
+        "title": "Financial Controller Solutions",
+        "description": "Accurate, timely financial reporting you can trust. Monthly financial statements and variance analysis. Cash flow forecasting and management. Internal controls and process optimization. Compliance with GAAP standards and regulatory requirements."
       },
       {
-        "title": "Cash Flow Management",
-        "description": "Cash is king. We optimize your cash conversion cycle, manage liquidity, and implement treasury strategies to ensure your business is resilient and capitalized for growth."
+        "title": "Cash Flow Optimization",
+        "description": "Turn cash flow chaos into predictable, positive cash management. Advanced cash flow modeling and forecasting. Working capital optimization strategies. Payment terms negotiation and accounts management. Cash flow crisis prevention and recovery planning."
       },
       {
-        "title": "M&A and Transaction Advisory",
-        "description": "Navigate the complexities of buying or selling with confidence. We provide expert due diligence, valuation, and integration support to maximize transaction value."
+        "title": "P&L Analysis & Optimization",
+        "description": "Transform your profit and loss from confusion to clarity. Comprehensive profitability analysis by product, service, or division. Cost structure optimization and margin improvement. Revenue stream analysis and enhancement opportunities. Break-even analysis and scenario planning."
       }
     ]
   },
-  "aboutFounder": {
-    "tagline": "Meet the Visionary",
-    "name": "Florian Pass",
-    "bio": "With over 15 years of experience... Florian founded Financify with a single mission: to empower ambitious businesses with the C-level financial expertise they need to not just survive, but thrive on a global scale.",
-    "quote": "Financial strategy isn't about restriction; it's about enabling ambition."
-  },
+"aboutFounder": {
+  "tagline": "Meet Your Strategic Financial Partner",
+  "name": "Florian Pass, Fractional CFO & Strategic Advisor",
+  "bio_intro": "With 25 years of international finance and control experience across the US, Scotland, Germany, and Brazil, Florian brings Fortune 500 expertise to growing businesses.",
+  "bio_highlights_title": "Key Expertise That Drives Value:",
+  "bio_highlights": [
+    "US GAAP Expert for compliant and accurate financials",
+    "SOX Compliance Veteran for public company-level rigor",
+    "IFRS Proficiency for businesses with global operations",
+    "Led multinational financial operations and teams"
+  ],
+  "quote": "I've seen what separates businesses that scale successfully from those that crash during growth. It's not luck – it's having the right financial foundation and strategic oversight in place before you need it."
+},
   "testimonials": {
     "title": "What Our Clients Say",
     "nav_previous": "Previous",
     "nav_next": "Next",
     "items": [
       {
-        "quote": "Working with Financify was a game-changer. Their strategic insights transformed our financial operations and unlocked growth we didn't think was possible.",
-        "name": "Sarah Johnson",
-        "title": "CEO, Tech Innovators Inc."
+        "quote": "\"Before Keystone, we were making decisions based on gut feelings and outdated reports. Now we have real-time financial intelligence that's transformed how we operate. Our cash flow went from chaotic to predictable, and we've grown 40% while actually improving our margins.\"",
+        "name": "Sarah Chen",
+        "title": "CEO, TechFlow Solutions"
       },
       {
-        "quote": "The level of professionalism and expertise is unparalleled. Florian's team provided us with a clear financial roadmap that has been instrumental in our expansion into Europe.",
-        "name": "Michael Chen",
-        "title": "Founder, Global Exports Co."
+        "quote": "\"Florian didn't just clean up our books – he built a financial strategy that's allowed us to scale confidently. We went from surviving month-to-month to planning quarters ahead. Best investment we've made in our business.\"",
+        "name": "Marcus Rodriguez",
+        "title": "Founder, Rodriguez Construction Group"
       },
       {
-        "quote": "As a fast-growing startup, we needed more than just an accountant. We needed a strategic partner. Financify delivered exactly that, and more.",
-        "name": "Emily Rodriguez",
-        "title": "CTO, Creative Solutions"
+        "quote": "\"Having Keystone is like having a world-class CFO on speed dial. The level of financial insight and strategic guidance we get for a fraction of a full-time CFO cost has been a game-changer for our growth.\"",
+        "name": "Jennifer Walsh",
+        "title": "Partner, Walsh & Associates Legal"
       }
     ]
   },
   "audience": {
-    "title": "Designed for Visionaries",
-    "subtitle": "We thrive when partnering with leaders who are building the future.",
+    "title": "Who Is This For?",
+    "subtitle": "We serve ambitious businesses across all industries that are ready to scale with confidence and clarity. A few examples would be:",
     "profiles": [
       {
-        "title": "Ambitious Startups",
-        "description": "Targeting rapid, sustainable scaling and preparing for Series A/B funding rounds."
+        "title": "Manufacturing & Industrial Companies",
+        "description": "Mid-size businesses ready to optimize operations and expand internationally with proper financial controls."
       },
       {
-        "title": "Global Scale-Ups",
-        "description": "Established SMEs preparing for international expansion, market entry, or cross-border M&A."
+        "title": "Professional Services Firms",
+        "description": "Consulting, legal, and agency businesses that need to scale without losing profitability or client quality."
       },
       {
-        "title": "Tech Companies",
-        "description": "SaaS, FinTech, and Deep Tech firms seeking strategic financial leadership to fuel innovation."
+        "title": "Healthcare & Medical Organizations",
+        "description": "Companies requiring strict compliance and financial governance while maintaining growth momentum."
       },
       {
-        "title": "Complex Operations",
-        "description": "Businesses with sophisticated supply chains or multi-entity structures requiring expert oversight."
+        "title": "E-commerce & Retail Businesses",
+        "description": "Growing brands that need sophisticated inventory management and international expansion strategies."
+      },
+      {
+        "title": "Construction & Real Estate",
+        "description": "Project-based businesses requiring advanced cash flow management and risk assessment capabilities."
       }
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Quick answers to common questions. For anything else, we're just a message away.",
+    "subtitle": "",
     "items": [
       {
-        "question": "What is a Fractional CFO?",
-        "answer": "A Fractional CFO is an experienced chief financial officer who works with businesses on a part-time, \"fractional\" basis. This provides you with C-level strategic expertise, financial oversight, and data-driven insights without the cost and commitment of a full-time executive salary."
+        "question": "How is this different from my current accountant?",
+        "answer": "Your accountant handles compliance and tax filing – essential but backward-looking functions. We provide forward-looking strategic financial leadership, real-time insights, and proactive planning that drives growth."
       },
       {
-        "question": "How do you work with international clients?",
-        "answer": "Our team is fully remote and operates across multiple time zones. We leverage modern cloud-based accounting and communication tools to provide seamless, real-time collaboration regardless of your location in the US, Brazil, or Europe."
+        "question": "What's included in your services?",
+        "answer": "Depending on your needs: monthly financial reporting, cash flow management, strategic planning, budgeting and forecasting, KPI tracking, board presentation support, and access to our network of specialists."
       },
       {
-        "question": "What size of business do you typically work with?",
-        "answer": "We specialize in partnering with ambitious companies, from high-growth startups seeking their first round of funding to established SMEs with annual revenues between $5M and $50M who are planning for major growth events."
+        "question": "How quickly will I see results?",
+        "answer": "Most clients see immediate improvements in financial clarity within 30 days. Strategic improvements in cash flow and profitability typically show measurable results within 90 days."
       },
       {
-        "question": "How is this different from a standard accounting service?",
-        "answer": "Standard accounting focuses on historical data—recording transactions and ensuring compliance. We are forward-looking. We use your financial data to build strategic roadmaps, model future scenarios, and provide the insights you need to make proactive, informed decisions."
+        "question": "Is this cost-effective compared to hiring a full-time CFO?",
+        "answer": "An internationally experienced CFO in the US costs $200K-$400K+ annually plus benefits. Our fractional services deliver the same level of expertise and strategic value for a fraction of that investment."
+      },
+      {
+        "question": "Do you work with businesses planning international expansion?",
+        "answer": "Absolutely. With our international experience and network, we're uniquely positioned to support US businesses expanding globally, particularly into Latin American markets."
       }
     ]
   },
   "cta": {
-    "title": "Your Journey to Financial Clarity Begins Now.",
-    "subtitle": "Stop guessing, start building. Let's craft the financial framework your ambition deserves.",
-    "button": "Schedule Your Strategic Consultation"
+    "title": "Ready to Transform Your Financial Foundation?",
+    "subtitle": "Stop making critical business decisions in the dark. Every day you operate without clear financial intelligence and strategic oversight is a day you're leaving money on the table and risking your business's future. The businesses that thrive during growth aren't the ones with the best products or services – they're the ones with the strongest financial foundation and clearest strategic vision.",
+    "button": "Get Your Strategic Financial Assessment"
   },
   "ahk": {
     "title": "Trusted by Global Institutions",
     "text": "Florian Pass is an official member of the German-Brazilian Chamber of Commerce and Industry (AHK), a prestigious institution that fosters economic relations and business excellence between Germany and Brazil. This affiliation strengthens our international credibility and connects Keystone Consulting with a powerful network of global business leaders.",
-    "seal1_alt": "AHK Seal 1",
-    "seal2_alt": "AHK Seal 2"
+    "seal1_alt": "Seal AHK 1",
+    "seal2_alt": "Seal AHK 2"
   },
   "contact": {
-    "title": "Ready to Take the Next Step?",
-    "subtitle": "Choose your preferred way to connect. We look forward to hearing from you.",
-    "channels": [
-      {
-        "title": "Start a Conversation",
-        "contact": "contact@financify.com"
-      },
-      {
-        "title": "Schedule a Call",
-        "contact": "Book a Time Slot"
-      },
-      {
-        "title": "Connect Professionally",
-        "contact": "linkedin.com/in/financify"
-      }
-    ],
-    "arrow": "→"
+  "title": "Ready to unlock your business's financial potential?",
+  "subtitle": "Connect with us:",
+  "channels": [
+    {
+      "title": "Email",
+      "contact": "florian@meetkeystone.com",
+      "link": "mailto:florian@meetkeystone.com"
+    },
+    {
+      "title": "Phone",
+      "contact": "+55 (11) 97285-5566",
+      "link": "tel:+5511972855566"
+    },
+    {
+      "title": "WhatsApp",
+      "contact": "Quick response for urgent questions",
+      "link": "https://wa.me/5511972855566"
+    }
+  ],
+  "arrow": "→"
   },
-  "footer": {
-    "logo": "Financify",
-    "tagline": "Strategic financial guidance for a complex world.",
-    "navigate": {
-      "title": "Navigate",
-      "links": {
-        "services": "Services",
-        "about": "About",
-        "testimonials": "Testimonials",
-        "faq": "FAQ"
-      }
-    },
-    "legal": {
-      "title": "Legal",
-      "links": {
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
-      }
-    },
-    "contact": {
-      "title": "Contact",
-      "email": "contact@financify.com"
-    },
-    "copyright": "© {year} Financify. All Rights Reserved."
-  }
+    "footer": {
+  "logo": "Keystone Consulting",
+  "tagline": "Financial clarity for ambitious businesses.",
+  "navigate": {
+    "title": "Navigate",
+    "links": {
+      "services": "Services",
+      "about": "About",
+      "testimonials": "Testimonials",
+      "faq": "FAQ"
+    }
+  },
+  "legal": {
+    "title": "Legal",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "florian@meetkeystone.com",
+    "phone": "+55 (11) 97285-5566",
+    "global_reach_title": "Global Reach",
+    "global_reach_text": "North America, Europe, and Latin America"
+  },
+  "copyright": "© {year} Keystone Consulting. All Rights Reserved."
+}
 }
