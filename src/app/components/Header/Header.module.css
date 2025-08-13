@@ -1,4 +1,4 @@
-/* src/components/Header/Header.module.css (ATUALIZADO PARA IMAGEM) */
+/* src/components/Header/Header.module.css (ATUALIZADO PARA LOGO + TEXTO EMBAIXO) */
 
 .headerContainer {
   position: fixed;
@@ -7,13 +7,13 @@
   width: 100%;
   z-index: 1000;
   background-color: transparent;
-  padding: 20px 0;
-  transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease, padding var(--transition-speed) ease;
+  padding: 15px 0;
+  transition: all var(--transition-speed) ease;
 }
 
 .headerContainer.scrolled {
   background-color: #ffffff;
-  padding: 15px 0;
+  padding: 10px 0;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
@@ -29,24 +29,38 @@
   align-items: center;
 }
 
-/* ===== NOVOS ESTILOS PARA O LOGO ===== */
+/* ===== NOVOS ESTILOS PARA O LOGO E TEXTO EMBAIXO ===== */
 .logoLink {
   display: flex;
+  /* MUDANÇA PRINCIPAL: Alinhar verticalmente */
+  flex-direction: column;
   align-items: center;
+  gap: 2px; /* Espaço pequeno entre a imagem e o texto */
 }
 
 .logoImage {
-  height: auto; /* Mantém a proporção da imagem */
   transition: filter var(--transition-speed) ease;
-  /* Por padrão, a logo é escura. O filtro a tornará branca. */
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
+  height: 35px; /* Ajusta a altura da imagem */
+  width: auto;
 }
 
-/* Ao rolar, removemos o filtro para mostrar a logo em sua cor original (escura) */
+.logoText {
+  font-size: 0.7rem; /* Texto menor para caber embaixo */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+  transition: color var(--transition-speed) ease;
+}
+
+/* Ao rolar, removemos o filtro da imagem e mudamos a cor do texto */
 .headerContainer.scrolled .logoImage {
   filter: none;
 }
-/* ====================================== */
+.headerContainer.scrolled .logoText {
+  color: var(--primary-color);
+}
+/* ====================================================== */
 
 
 .navLinks {
@@ -157,8 +171,14 @@
 .mobileNavLinks a { color: var(--text-light); font-size: 1.2rem; font-weight: 500; }
 .mobileCta { background-color: var(--accent-color); color: var(--primary-color) !important; padding: 12px 24px; border-radius: var(--border-radius); font-weight: bold; }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   .menuToggle { display: none; }
   .navLinks { display: flex; }
   .ctaButton { display: inline-block; }
+}
+
+@media (max-width: 768px) {
+    .logoText {
+        display: none; /* Em telas menores, esconde o texto para não poluir */
+    }
 }

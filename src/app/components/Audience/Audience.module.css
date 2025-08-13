@@ -1,4 +1,4 @@
-/* src/components/Audience/Audience.module.css (VERSÃO COM INTERAÇÃO INVERTIDA) */
+/* src/components/Audience/Audience.module.css (COM CARDS 2D) */
 
 .audienceSection {
   background-color: var(--primary-color);
@@ -31,31 +31,54 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px; /* Aumenta um pouco o gap para o efeito 3D respirar */
+  gap: 40px;
   max-width: 900px;
   margin: 0 auto;
-  perspective: 1200px; /* Aumenta a perspectiva para um 3D mais sutil */
+  grid-template-columns: 1fr;
 }
 
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .gridLayout3 {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gridLayout5 {
+    max-width: 1200px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .gridLayout5 .card {
+    grid-column: span 2;
+  }
+  .gridLayout5 .card:nth-last-child(-n+2) {
+    grid-column: span 3;
+  }
+}
+
+/* ===== ESTILO DO CARD ATUALIZADO PARA 2D ===== */
 .card {
   position: relative;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 30px;
-  transform-style: preserve-3d;
   overflow: hidden;
-
-  /* MUDANÇA: Estado de repouso inclinado */
-  transform: rotateX(-10deg) rotateY(10deg);
-  box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  /* Propriedade 'transform' agora é controlada apenas pelo JS */
+  /* A transição agora é gerenciada pelo anime.js, mas podemos deixar uma base */
+  transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  /* No hover, o JS assume, mas podemos definir um box-shadow diferente */
-  box-shadow: 0px 0px 40px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
 .card:hover .cardShine {
@@ -95,13 +118,6 @@
   opacity: 0.7;
 }
 
-/* --- Media Queries para Layout --- */
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 767px) {
   .audienceSection {
     padding: 80px 20px;
@@ -111,9 +127,5 @@
   }
   .subtitle {
     font-size: 1.1rem;
-  }
-  /* Em mobile, removemos a inclinação para evitar problemas de layout */
-  .card {
-    transform: none;
   }
 }

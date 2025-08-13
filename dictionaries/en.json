@@ -11,12 +11,12 @@
   },
   "hero": {
     "headline_line1": "Transform Your Growing Business Into A Powerhouse Of Shareholder Value Creation",
-    "headline_line2": "Stop Flying Blind With Your Finances – Get C-Level Financial Leadership Without the C-Level Price Tag",
+    "headline_line2": "Stop Flying Blind With Your Numbers – Get C-Level Financial Leadership Without the C-Level Price Tag",
     "subheadline": "What if you could have an internationally experienced CFO guiding your financial strategy for a fraction of the cost of hiring one full-time?",
     "cta_button": "Get Your Strategic Financial Assessment"
   },
   "painPoints": {
-    "title": "The Hidden Crisis Killing Growing Businesses",
+    "title": "The Hidden Cost of Your Financial Blind Spots",
     "subtitle": "",
     "cards": [
       {
@@ -40,7 +40,7 @@
   "advantage": {
     "title_line1": "The Keystone Advantage:",
     "title_line2": "Financial Clarity That Drives Real Growth",
-    "text": "We don't just fix your numbers – we build the financial infrastructure that transforms growing businesses into industry leaders.",
+    "text": "We don't just fix your numbers – we build the financial structure your business needs to scale confidently.",
     "benefits": [
       "Strategic Financial Leadership, Not Just Bookkeeping",
       "Real-Time Financial Intelligence",
@@ -59,8 +59,8 @@
         "description": "Strategic financial leadership that drives growth. Financial strategy and planning aligned with your business goals. Board-ready financial reporting and analysis. Strategic decision support for major business moves. Risk management and compliance oversight."
       },
       {
-        "title": "Financial Controller Solutions",
-        "description": "Accurate, timely financial reporting you can trust. Monthly financial statements and variance analysis. Cash flow forecasting and management. Internal controls and process optimization. Compliance with GAAP standards and regulatory requirements."
+        "title": "Controlling Solutions",
+        "description": "Transforming your numbers into stories. Accurate, timely financial reporting you can trust. Monthly financial statements and variance analysis. Cash flow forecasting and management. Internal controls and process optimization. Compliance with GAAP standards and regulatory requirements."
       },
       {
         "title": "Cash Flow Optimization",
@@ -72,38 +72,42 @@
       }
     ]
   },
-"aboutFounder": {
-  "tagline": "Meet Your Strategic Financial Partner",
-  "name": "Florian Pass, Fractional CFO & Strategic Advisor",
-  "bio_intro": "With 25 years of international finance and control experience across the US, Scotland, Germany, and Brazil, Florian brings Fortune 500 expertise to growing businesses.",
-  "bio_highlights_title": "Key Expertise That Drives Value:",
-  "bio_highlights": [
-    "US GAAP Expert for compliant and accurate financials",
-    "SOX Compliance Veteran for public company-level rigor",
-    "IFRS Proficiency for businesses with global operations",
-    "Led multinational financial operations and teams"
-  ],
-  "quote": "I've seen what separates businesses that scale successfully from those that crash during growth. It's not luck – it's having the right financial foundation and strategic oversight in place before you need it."
-},
+  "aboutFounder": {
+    "tagline": "Meet Your Strategic Financial Partner",
+    "name": "Florian Pass, CFO & Strategic Advisor",
+    "bio_intro": "With 25 years of international finance and control experience across the US, Scotland, Germany, and Brazil, Florian brings Fortune 500 expertise to your business.",
+    "bio_highlights_title": "Key Expertise That Drives Value:",
+    "bio_highlights": [
+      "Understanding the business strategy and optimize financial planning",
+      "Provide better and cleaner data",
+      "Challenge legacy technologies",
+      "Clear communication and knowing your audience",
+      "Multinational and multi-cultural team-leadership creating an environment of personal growth"
+    ],
+    "quote": "What differentiates a struggling business from a thriving one is that great companies view their administration as an asset and not as a legal obligation – an treat it like this."
+  },
   "testimonials": {
     "title": "What Our Clients Say",
-    "nav_previous": "Previous",
-    "nav_next": "Next",
     "items": [
       {
-        "quote": "\"Before Keystone, we were making decisions based on gut feelings and outdated reports. Now we have real-time financial intelligence that's transformed how we operate. Our cash flow went from chaotic to predictable, and we've grown 40% while actually improving our margins.\"",
-        "name": "Sarah Chen",
-        "title": "CEO, TechFlow Solutions"
+        "quote": "During my time at Gore I had the pleasure to work together with Florian who was responsible for the Controlling of one of the plants. Florian is one of the very few financial professionals I met who actually made it fun to work with numbers. Besides all his technical financial knowledge he has the right people skills helping to transform individual talent into performance. He has a great way to form engaged teams, define goals, keeping everybody informed, being open to suggestions and getting out of people's way so that they can work.",
+        "name": "Christian Pohle",
+        "title": "IT Consultant for System Technology and Security, W.L. Gore & Associates"
       },
       {
-        "quote": "\"Florian didn't just clean up our books – he built a financial strategy that's allowed us to scale confidently. We went from surviving month-to-month to planning quarters ahead. Best investment we've made in our business.\"",
-        "name": "Marcus Rodriguez",
-        "title": "Founder, Rodriguez Construction Group"
+        "quote": "Florian consulted with our business to help us organize the finance department. Florian is a financial wizard. He is a very talented professional and easy to get along with.",
+        "name": "Brian Requarth",
+        "title": "Co-Founder of Latitud | Former Exec Chair of Grupo ZAP"
       },
       {
-        "quote": "\"Having Keystone is like having a world-class CFO on speed dial. The level of financial insight and strategic guidance we get for a fraction of a full-time CFO cost has been a game-changer for our growth.\"",
-        "name": "Jennifer Walsh",
-        "title": "Partner, Walsh & Associates Legal"
+        "quote": "I know Florian personally and I find it impressive to see how he is engaging with both employees and clients. In our conversations I became to believe that the way he engages with his team-members reflects how they engage with the clients. Not rocket-science but very effective.",
+        "name": "Milton Rivera Manga",
+        "title": "Ex-Country Manager Mentor and Executive Coach"
+      },
+      {
+        "quote": "I had the pleasure to work with Florian as colleagues during the Reebok JV Model and later integration to adidas group. During this project I was able to work with him as a team and enjoy his experience and contribution to several process improvements. He most definitely is a strong leader and hard worker.",
+        "name": "Gustavo Malinauskas",
+        "title": "Controller / Sr Accounting Manager / Gerente Contable"
       }
     ]
   },
@@ -171,53 +175,53 @@
     "seal2_alt": "Seal AHK 2"
   },
   "contact": {
-  "title": "Ready to unlock your business's financial potential?",
-  "subtitle": "Connect with us:",
-  "channels": [
-    {
-      "title": "Email",
-      "contact": "florian@meetkeystone.com",
-      "link": "mailto:florian@meetkeystone.com"
+    "title": "Ready to unlock your business's financial potential?",
+    "subtitle": "Connect with us:",
+    "channels": [
+      {
+        "title": "Email",
+        "contact": "florian@meetkeystone.com",
+        "link": "mailto:florian@meetkeystone.com"
+      },
+      {
+        "title": "Phone",
+        "contact": "+55 (11) 97285-5566",
+        "link": "tel:+5511972855566"
+      },
+      {
+        "title": "WhatsApp",
+        "contact": "Quick response for urgent questions",
+        "link": "https://wa.me/5511972855566"
+      }
+    ],
+    "arrow": "→"
+  },
+  "footer": {
+    "logo": "Keystone Consulting",
+    "tagline": "Financial clarity for ambitious businesses.",
+    "navigate": {
+      "title": "Navigate",
+      "links": {
+        "services": "Services",
+        "about": "About",
+        "testimonials": "Testimonials",
+        "faq": "FAQ"
+      }
     },
-    {
-      "title": "Phone",
-      "contact": "+55 (11) 97285-5566",
-      "link": "tel:+5511972855566"
+    "legal": {
+      "title": "Legal",
+      "links": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      }
     },
-    {
-      "title": "WhatsApp",
-      "contact": "Quick response for urgent questions",
-      "link": "https://wa.me/5511972855566"
-    }
-  ],
-  "arrow": "→"
-  },
-    "footer": {
-  "logo": "Keystone Consulting",
-  "tagline": "Financial clarity for ambitious businesses.",
-  "navigate": {
-    "title": "Navigate",
-    "links": {
-      "services": "Services",
-      "about": "About",
-      "testimonials": "Testimonials",
-      "faq": "FAQ"
-    }
-  },
-  "legal": {
-    "title": "Legal",
-    "links": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service"
-    }
-  },
-  "contact": {
-    "title": "Contact",
-    "email": "florian@meetkeystone.com",
-    "phone": "+55 (11) 97285-5566",
-    "global_reach_title": "Global Reach",
-    "global_reach_text": "North America, Europe, and Latin America"
-  },
-  "copyright": "© {year} Keystone Consulting. All Rights Reserved."
-}
+    "contact": {
+      "title": "Contact",
+      "email": "florian@meetkeystone.com",
+      "phone": "+55 (11) 97285-5566",
+      "global_reach_title": "Global Reach",
+      "global_reach_text": "North America, Europe, and Latin America"
+    },
+    "copyright": "© {year} Keystone Consulting. All Rights Reserved."
+  }
 }

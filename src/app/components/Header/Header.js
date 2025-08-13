@@ -1,4 +1,4 @@
-// src/components/Header/Header.js (COM LOGO REDUZIDA)
+// src/components/Header/Header.js (COM LOGO E TEXTO EMBAIXO)
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -54,18 +54,19 @@ const Header = ({ dictionary }) => {
     <header className={`${styles.headerContainer} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <nav className={styles.nav}>
+          {/* ===== MUDANÇA: Logo e texto agora em layout vertical ===== */}
           <Link href="/" className={styles.logoLink}>
-            {/* ===== MUDANÇA AQUI: Dimensões da logo reduzidas ===== */}
             <Image
               src="/images/logo.png"
-              alt="Financify Logo"
-              width={120} // Reduzido de 140
-              height={34}  // Reduzido de 40 para manter a proporção
+              alt="Keystone Consulting Logo"
+              width={40}
+              height={40}
               priority
               className={styles.logoImage}
             />
-            {/* ======================================================= */}
+            <span className={styles.logoText}>Keystone Consulting</span>
           </Link>
+          {/* ======================================================= */}
 
           <ul className={styles.navLinks}>
             {Object.keys(dictionary.nav).map((key) => (

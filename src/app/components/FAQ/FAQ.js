@@ -115,4 +115,4 @@ const FAQ = ({ dictionary }) => {
   );
 };
 
-export default FAQ;
+export default FAQ; 

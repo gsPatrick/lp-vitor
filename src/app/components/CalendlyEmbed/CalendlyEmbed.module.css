@@ -1,0 +1,34 @@
+/* src/components/CalendlyEmbed/CalendlyEmbed.module.css */
+
+.calendlyContainer {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-light); /* Cor do texto para o título/subtítulo */
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.successTitle {
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.successSubtitle {
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.1rem);
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.widgetWrapper {
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Garante que o widget respeite o border-radius */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

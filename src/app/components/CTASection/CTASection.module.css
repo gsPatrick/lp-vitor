@@ -1,4 +1,4 @@
-/* src/components/CTASection/CTASection.module.css (VERSÃO DE IMPACTO MONUMENTAL) */
+/* src/components/CTASection/CTASection.module.css (SOLUÇÃO DEFINITIVA) */
 
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
@@ -7,16 +7,14 @@
 }
 
 .ctaSection {
-  /* Variável para a animação do holofote */
   --spotlight-size: 100%;
   
   background-color: var(--primary-color);
-  padding: 160px 20px; /* Mais padding vertical */
+  padding: 160px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
   
-  /* Efeito de Holofote (Spotlight) */
   background-image: radial-gradient(
     circle at 50% 30%,
     rgba(255, 255, 255, 0.08) 0%,
@@ -38,56 +36,60 @@
 }
 
 .title {
-  font-size: 4rem; /* Título grande, mas proporcional */
+  /* A tipografia fluida continua sendo uma boa prática */
+  font-size: clamp(2.2rem, 1.5rem + 4vw, 4rem);
+  
   font-weight: 700;
   color: #fff;
-  line-height: 1.15;
+  line-height: 1.2;
   margin-bottom: 30px;
-}
-.title span {
-  display: inline-block; /* Necessário para as animações individuais */
+  /* Garante que não haverá hifenização automática */
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
+/* ===== A CORREÇÃO PRINCIPAL E DEFINITIVA ===== */
+.titleWord {
+  /* Transforma cada palavra/frase em um bloco que não pode ser quebrado. */
+  /* Se não couber na linha, o bloco inteiro vai para a próxima. */
+  display: inline-block;
+}
+/* ============================================= */
+
+
 .subtitle {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
   color: var(--text-light);
   opacity: 0.8;
   max-width: 650px;
-  margin: 0 auto 80px auto; /* MAIS espaço para o botão respirar */
+  margin: 0 auto 80px auto;
   line-height: 1.7;
 }
 
-/* --- O BOTÃO MONUMENTAL --- */
 .ctaButton {
   display: inline-block;
   position: relative;
   background-color: var(--accent-color);
   color: var(--primary-color);
-  
-  /* Escala massiva */
   padding: 28px 40px; 
   border-radius: 12px;
-  font-size: 1.5rem; 
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
   font-weight: 700;
-  
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-decoration: none;
   box-shadow: 0 20px 50px -10px rgba(212, 175, 55, 0.4);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
   will-change: transform;
-  
-  /* Animação de pulso contínua para chamar atenção */
   animation: pulse 2.2s infinite;
 }
 
 .ctaButton:hover {
-  animation-play-state: paused; /* Pausa o pulso no hover */
-  transform: translateY(-10px) scale(1.03); /* Hover mais pronunciado */
+  animation-play-state: paused;
+  transform: translateY(-10px) scale(1.03);
   box-shadow: 0 30px 60px -10px rgba(212, 175, 55, 0.5);
 }
 
-/* A onda de choque que anima na entrada */
 .shockwave {
   position: absolute;
   top: 50%;
@@ -101,36 +103,12 @@
   pointer-events: none;
 }
 
-/* Ajustes responsivos */
-@media (max-width: 992px) {
-    .title {
-        font-size: 3.5rem;
-    }
-}
-
 @media (max-width: 768px) {
-  .ctaSection {
-    padding: 120px 20px;
-  }
-  .title {
-    font-size: 2.8rem;
-  }
-  .subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 60px;
-  }
-  .ctaButton {
-    padding: 24px 30px;
-    font-size: 1.2rem;
-  }
+  .ctaSection { padding: 120px 20px; }
+  .subtitle { margin-bottom: 60px; }
+  .ctaButton { padding: 24px 30px; }
 }
 
 @media (max-width: 480px) {
-    .title {
-        font-size: 2.4rem;
-    }
-    .ctaButton {
-        padding: 20px 24px;
-        font-size: 1rem;
-    }
+  .ctaButton { padding: 20px 24px; }
 }

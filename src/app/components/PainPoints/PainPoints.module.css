@@ -1,8 +1,7 @@
-/* src/components/PainPoints/PainPoints.module.css (VERSÃO COMPLETA E COM ALTURA AJUSTADA) */
+/* src/components/PainPoints/PainPoints.module.css (VERSÃO COM LAYOUT ORGANIZADO) */
 
 .painPointsSection {
   background-color: var(--background-color);
-  /* ALTURA AJUSTADA: Padding vertical reduzido de 120px para 100px */
   padding: 100px 20px; 
   position: relative;
   overflow: hidden;
@@ -11,7 +10,6 @@
 .header {
   text-align: center;
   max-width: 800px;
-  /* ALTURA AJUSTADA: Margem inferior reduzida de 80px para 60px */
   margin: 0 auto 60px auto; 
 }
 
@@ -28,37 +26,54 @@
   line-height: 1.6;
 }
 
+/* ===== NOVA LÓGICA DE GRADE ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px; /* Gap reduzido de 40px para 30px para um layout mais coeso */
+  gap: 30px;
   max-width: var(--max-width);
   margin: 0 auto;
+  /* Mobile-first: Inicia com 1 coluna */
+  grid-template-columns: 1fr;
 }
 
+/* Para telas maiores (tablets), o padrão será de 2 colunas.
+   Isso resolve o layout de 4 itens (2x2) automaticamente. */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Em telas de desktop, se a classe .grid3 estiver presente,
+   forçamos um layout de 3 colunas. */
+@media (min-width: 992px) {
+  .grid.grid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* =============================== */
+
+
 .card {
-  /* Preparação para a animação de WIPE */
   position: relative;
-  overflow: hidden; /* ESSENCIAL para esconder o ::before wipe */
+  overflow: hidden;
   background-color: #fff;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   transition: border-color 0.3s ease;
   
-  /* Variáveis CSS para serem controladas pelo GSAP */
   --wipe-width: 0%;
   --wipe-left: 0%;
 }
 
 .card::before {
-  /* O elemento WIPE (limpeza) */
   content: '';
   position: absolute;
   top: 0;
   left: var(--wipe-left);
   width: var(--wipe-width);
   height: 100%;
-  background-color: #eaf2ff; /* Um azul bem claro, quase branco */
+  background-color: #eaf2ff;
   z-index: 2;
 }
 
@@ -67,13 +82,11 @@
 }
 
 .cardContent {
-  /* Conteúdo fica abaixo do WIPE até ser revelado */
   position: relative;
-  /* ALTURA AJUSTADA: Padding interno do card reduzido de 40px para 30px */
   padding: 30px;
   text-align: left;
   z-index: 1;
-  opacity: 0; /* Começa invisível, GSAP cuida de revelar */
+  opacity: 0;
 }
 
 .iconWrapper {
@@ -84,7 +97,7 @@
   height: 60px;
   background-color: var(--accent-color-light, #fdf6e3);
   border-radius: 50%;
-  margin-bottom: 20px; /* Margem do ícone reduzida de 25px para 20px */
+  margin-bottom: 20px;
 }
 
 .iconWrapper svg {
@@ -94,7 +107,7 @@
 }
 
 .cardTitle {
-  font-size: 1.3rem; /* Tamanho da fonte ligeiramente ajustado */
+  font-size: 1.3rem;
   margin-bottom: 10px;
   color: var(--primary-color);
 }
@@ -102,16 +115,15 @@
 .cardDescription {
   font-size: 1rem;
   color: var(--secondary-color);
-  line-height: 1.6; /* Line-height ajustado para melhor legibilidade */
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
   .painPointsSection {
-    /* ALTURA AJUSTADA: Padding em mobile também reduzido */
     padding: 80px 20px;
   }
   .header {
-    margin-bottom: 50px; /* Margem ajustada para mobile */
+    margin-bottom: 50px;
   }
   .title {
     font-size: 2.2rem;

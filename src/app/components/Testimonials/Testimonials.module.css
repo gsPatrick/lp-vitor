@@ -1,151 +1,114 @@
-/* src/components/Testimonials/Testimonials.module.css (VERSÃO CINEMATOGRÁFICA) */
+/* src/components/Testimonials/Testimonials.module.css (VERSÃO EM GRADE) */
 
 .testimonialsSection {
-  padding: 140px 20px;
+  background-color: var(--background-color);
+  padding: 120px 20px;
   position: relative;
   overflow: hidden;
-  background-color: var(--background-color);
-}
-
-.backgroundEffect {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f8f9fa 80%);
-  opacity: 0.8;
 }
 
 .container {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
+  max-width: var(--max-width);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.card {
   background-color: #fff;
-  padding: 40px;
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  box-shadow: 0 30px 60px -20px rgba(13, 27, 42, 0.15);
-  border: 1px solid #fff;
-}
-
-.imageContainer {
-  position: relative;
-  width: 100%;
-  padding-top: 66.66%; /* Proporção 3:2 */
-  border-radius: var(--border-radius);
-  overflow: hidden;
-}
-
-.imageFrame {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  border: 1px solid rgba(13, 27, 42, 0.1);
-  z-index: 2;
-}
-
-.authorImage {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.content {
+  padding: 35px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 30px -15px rgba(13, 27, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(13, 27, 42, 0.12);
+}
+
+.cardHeader {
+  display: flex;
   justify-content: space-between;
-  min-height: 280px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.quoteContent {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.starRating {
+  color: #ffc107; /* Amarelo dourado para as estrelas */
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.quoteIcon {
+  font-size: 2.5rem;
+  color: var(--border-color);
+  transform: rotate(180deg);
 }
 
 .quote {
-  font-family: 'Georgia', serif;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: var(--primary-color);
-  font-weight: 400;
-  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  flex-grow: 1; /* Faz a citação ocupar o espaço disponível */
 }
 
 .author {
-  display: flex;
-  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
 }
 
 .authorName {
+  display: block;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--primary-color);
+  margin-bottom: 4px;
 }
 
 .authorTitle {
   font-size: 0.9rem;
   color: var(--secondary-color);
+  opacity: 0.8;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-  border-top: 1px solid var(--border-color);
-  padding-top: 20px;
-}
-
-.progress {
-  display: flex;
-  gap: 8px;
-}
-
-.progressBar {
-  height: 4px;
-  width: 30px;
-  background-color: var(--border-color);
-  border-radius: 2px;
-  transition: background-color 0.4s ease;
-}
-.progressBar.active {
-  background-color: var(--primary-color);
-}
-
-.navButtons {
-  display: flex;
-  gap: 10px;
-}
-.navButton {
-  width: 45px; height: 45px;
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
-  background-color: transparent;
-  color: var(--secondary-color);
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.navButton:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-  border-color: var(--primary-color);
-}
-
-@media (min-width: 992px) {
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .testimonialsSection {
+    padding: 80px 20px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
   .grid {
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    padding: 60px;
+    grid-template-columns: 1fr;
   }
-  .imageContainer {
-    padding-top: 125%; /* Proporção mais vertical para desktop */
-  }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .card {
+        padding: 30px;
+    }
 }

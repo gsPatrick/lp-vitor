@@ -1,6 +1,6 @@
-// src/app/[lang]/page.js
-import { getDictionary } from '../../../get-dictionary'; // Ajuste o caminho se necessário
-import { getFormDictionary } from '../../../dictionaries/form-dictionary'; // ===== 1. IMPORTAR O DICIONÁRIO DO FORMULÁRIO =====
+// src/app/[lang]/page.js (COM BOTÃO FLUTUANTE)
+import { getDictionary } from '../../../get-dictionary';
+import { getFormDictionary } from '../../../dictionaries/form-dictionary';
 
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
@@ -13,24 +13,24 @@ import Audience from '../components/Audience/Audience';
 import FAQ from '../components/FAQ/FAQ';
 import CTASection from '../components/CTASection/CTASection';
 import ContactSection from '../components/ContactSection/ContactSection';
-import AssessmentForm from '../components/AssessmentForm/AssessmentForm'; // ===== 2. IMPORTAR O COMPONENTE DO FORMULÁRIO =====
-
+import AssessmentForm from '../components/AssessmentForm/AssessmentForm';
+import AhkSection from '../components/AhkSection/AhkSection';
 import Footer from '../components/Footer/Footer';
-// Importe a nova seção AHK quando ela for criada
- import AhkSection from '../components/AhkSection/AhkSection';
+import FloatingWhatsApp from '../components/FloatingWhatsApp/FloatingWhatsApp'; // ===== 1. IMPORTAR O NOVO COMPONENTE =====
 
 
 export default async function Home({ params: { lang } }) {
-  // Carrega o dicionário correto com base no idioma da URL
   const dictionary = await getDictionary(lang);
-  const formDictionary = await getFormDictionary(lang); // ===== 3. OBTER OS DADOS DO FORMULÁRIO =====
+  const formDictionary = await getFormDictionary(lang);
+
+  // Extrai o link do WhatsApp do dicionário de contato
+  const whatsappChannel = dictionary.contact.channels.find(c => c.title === 'WhatsApp');
+  const whatsappLink = whatsappChannel ? whatsappChannel.link : '';
 
   return (
     <main>
       <Header dictionary={dictionary.header} />
-      {/* ===== MUDANÇA AQUI: Adicionamos a prop 'lang' ===== */}
       <Hero dictionary={dictionary.hero} lang={lang} />
-      {/* ====================================================== */}
       <PainPoints dictionary={dictionary.painPoints} />
       <Advantage dictionary={dictionary.advantage} />
       <Services dictionary={dictionary.services} />
@@ -40,17 +40,16 @@ export default async function Home({ params: { lang } }) {
       <FAQ dictionary={dictionary.faq} />
       <CTASection dictionary={dictionary.cta} />
       <ContactSection dictionary={dictionary.contact} />
-
-    {/* ===== 4. POSICIONAR O FORMULÁRIO NO LOCAL CORRETO ===== */}
       <AssessmentForm 
         dictionary={formDictionary.form} 
         formData={formDictionary.formData} 
       />
-      {/* ======================================================= */}
-      
-      
       <AhkSection dictionary={dictionary.ahk} lang={lang} />
       <Footer dictionary={dictionary.footer} />
+      
+      {/* ===== 2. RENDERIZAR O BOTÃO FLUTUANTE ===== */}
+      <FloatingWhatsApp link={whatsappLink} />
+      {/* =============================================== */}
     </main>
   );
 }

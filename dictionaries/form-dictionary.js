@@ -1,4 +1,4 @@
-// /form-dictionary.js
+// /form-dictionary.js (COM FAIXAS DE RECEITA CORRIGIDAS)
 
 const dictionaries = {
   en: {
@@ -74,7 +74,9 @@ const dictionaries = {
 
 const formData = {
   countries: ["United States", "Canada", "United Kingdom", "Germany", "France", "Netherlands", "Italy", "Spain", "Brazil", "Switzerland", "Sweden"],
-  revenues: ["Under $1M", "$1M - $5M", "$5M - $10M", "$10M - $25M", "$25M - $50M", "$50M+"],
+  // ===== FAIXAS DE RECEITA ATUALIZADAS AQUI =====
+  revenues: ["Under $250.000", "$250.000 - $500.000", "$500.000 - $750.000", "$750.000 - $1.000.000", "$1.000.000 - $5.000.000", "$5.000.000+"],
+  // ===============================================
   countryCodes: ["+1 (US/CA)", "+44 (UK)", "+49 (DE)", "+33 (FR)", "+31 (NL)", "+39 (IT)", "+34 (ES)", "+55 (BR)", "+41 (CH)", "+46 (SE)"]
 };
 
