@@ -17,6 +17,7 @@ import AssessmentForm from '../components/AssessmentForm/AssessmentForm';
 import AhkSection from '../components/AhkSection/AhkSection';
 import Footer from '../components/Footer/Footer';
 import FloatingWhatsApp from '../components/FloatingWhatsApp/FloatingWhatsApp'; // ===== 1. IMPORTAR O NOVO COMPONENTE =====
+import BrazilExpansion from '../components/BrazilExpansion/BrazilExpansion'; // 1. IMPORTAR O NOVO COMPONENTE
 
 
 export default async function Home({ params: { lang } }) {
@@ -37,6 +38,10 @@ export default async function Home({ params: { lang } }) {
       <AboutFounder dictionary={dictionary.aboutFounder} />
       <Testimonials dictionary={dictionary.testimonials} />
       <Audience dictionary={dictionary.audience} />
+      
+      {/* 2. ADICIONAR O NOVO COMPONENTE AQUI */}
+      <BrazilExpansion dictionary={dictionary.brazilExpansion} />
+      
       <FAQ dictionary={dictionary.faq} />
       <CTASection dictionary={dictionary.cta} />
       <ContactSection dictionary={dictionary.contact} />
@@ -46,10 +51,7 @@ export default async function Home({ params: { lang } }) {
       />
       <AhkSection dictionary={dictionary.ahk} lang={lang} />
       <Footer dictionary={dictionary.footer} />
-      
-      {/* ===== 2. RENDERIZAR O BOTÃO FLUTUANTE ===== */}
       <FloatingWhatsApp link={whatsappLink} />
-      {/* =============================================== */}
     </main>
   );
 }

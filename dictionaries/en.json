@@ -21,7 +21,7 @@
     "cards": [
       {
         "title": "You're Growing Blind",
-        "description": "Making million-dollar decisions with thousand-dollar insights. Your current financial reports are either weeks behind or completely unreliable, leaving you to guess where your business really stands."
+        "description": "You’re making decisions based on “the wrong number” or gut feelings, not real-time financial insights."
       },
       {
         "title": "Cash Flow Chaos Rules Your Life",
@@ -69,6 +69,10 @@
       {
         "title": "P&L Analysis & Optimization",
         "description": "Transform your profit and loss from confusion to clarity. Comprehensive profitability analysis by product, service, or division. Cost structure optimization and margin improvement. Revenue stream analysis and enhancement opportunities. Break-even analysis and scenario planning."
+      },
+        {
+        "title": "Corporate Board Experience",
+        "description": "With 25+ years working with multinationals in the U.S., Europe, and Brazil—including service on multiple corporate boards—we bring board-level expertise in strategy, risk, governance, transparency, and ethics. We’ve driven profit growth, strengthened compliance, and led transformations, providing the vision, oversight, and global perspective for sustainable growth."
       }
     ]
   },
@@ -223,5 +227,37 @@
       "global_reach_text": "North America, Europe, and Latin America"
     },
     "copyright": "© {year} Keystone Consulting. All Rights Reserved."
+  },
+"brazilExpansion": {
+    "title": "International Expansion to Brazil",
+    "subtitle": "Thinking about expanding your business to Brazil? We've got you covered.",
+    "intro_text": "Keystone Consulting offers full entry support for companies seeking to operate in Brazil, including:",
+    "services_list": [
+      "Legal representation (Attorney-in-Fact / non managing administrator)",
+      "Local accounting and tax compliance",
+      "Business registration and regulatory guidance",
+      "Strategic advisory tailored to Brazilian business culture and risk environment"
+    ],
+    "value_prop": "With our multilingual, multicultural team, we help international businesses navigate the complexities of the Brazilian market — safely and efficiently.",
+    "punchline": "You're not just entering a new country. You're entering with structure, clarity, and local intelligence.",
+    "cta_text": "Talk to us about entering Brazil",
+    "features": [
+      {
+        "title": "Local Expertise",
+        "description": "Deep understanding of Brazilian business culture and regulations"
+      },
+      {
+        "title": "Global Network",
+        "description": "Connections with key players in the Brazilian market"
+      },
+      {
+        "title": "Proven Success",
+        "description": "Track record with major international expansions"
+      },
+      {
+        "title": "Strategic Partners",
+        "description": "Network of legal, tax, and compliance experts"
+      }
+    ]
   }
 }

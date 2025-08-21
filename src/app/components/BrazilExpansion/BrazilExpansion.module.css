@@ -1,0 +1,165 @@
+/* /app/components/BrazilExpansion/BrazilExpansion.module.css (VERSÃO MINIMALISTA SOFISTICADA) */
+
+.section {
+  background-color: var(--background-color); /* Fundo branco e limpo */
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Sombras de Folhas de Palmeira --- */
+.leafShadow {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+.leaf1 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="black" d="M501 364.5c-6.2-13-16.8-23.8-29.8-31.2-18.4-10.4-39.2-14.8-60.2-14.8-33.3 0-64.2 11.8-88.7 32.5-12.4 10.5-23.3 22.5-32.5 35.6-10.2 14.6-17.9 30.6-22.9 47.6-6.4-12.2-14.2-23.8-23.2-34.5-21.7-25.7-52.2-41.5-86.4-41.5-35.8 0-68.9 16.8-91.8 44.9-3.3-10-7.6-19.6-12.9-28.7-21.7-37-60.4-59.8-103.5-59.8V480h512v-99.3c-1.3-5-3.3-9.9-5.9-14.5-1.1-1.9-2.2-3.7-3.4-5.5z"/></svg>');
+  top: -50px;
+  right: -150px;
+  width: 600px;
+  height: 600px;
+  transform: rotate(20deg);
+}
+.leaf2 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="black" d="M485.4 222.6c-13.4-11.8-29.6-20.4-47.4-25.2-25-6.7-51.2-5.5-75.9 3.4-23.7 8.5-44.9 23.1-62.1 42.2-15.6 17.3-27.5 37.8-35.1 59.9-5.2-14.4-12-28.2-20.2-41.1-22.7-35.4-61.9-58-105.6-58-39.3 0-75.9 18.2-100.3 48.7-3.6-11-8.4-21.4-14.2-31.2C.5 184.1 0 148.5 13.9 116.7 30.1 79 63.8 50.4 104.2 40.1c42.8-10.9 87.3 1.9 119.5 31.9 29.8 27.7 44.9 66.3 40.2 104.9-2.7-5.5-5.9-10.9-9.7-16-17-22.7-38.6-41-63.3-53.2-28.9-14.2-61.2-18.5-92.4-12.5-33.8 6.5-64.2 24.3-85.8 50.1-5.6 6.8-10.4 14.2-14.2 22.1 14.4-14.5 32.1-25.7 51.7-32.3 28.5-9.6 59.4-9.3 87.2 1 27.8 10.3 51.4 29.4 67.5 54.1 1.9 2.9 3.7 5.8 5.4 8.7 11.2-13 24.4-24.1 39-33 26-15.8 56.5-22.5 86.9-18.6 34.6 4.4 65.6 22.6 86.8 50.1 1.6-4.9 3-9.9 4.2-15 4.3-17.9 1.3-36.9-8.4-53.1z"/></svg>');
+  bottom: 0;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  transform: rotate(-10deg) scaleX(-1);
+  opacity: 0.03;
+}
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+}
+
+.title {
+  font-size: clamp(2.5rem, 2rem + 2.5vw, 3.2rem);
+  font-weight: 700;
+  color: #004d22; /* Verde-escuro, quase floresta */
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.content {
+  max-width: 550px;
+}
+.introText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+.servicesList {
+  list-style: none; padding: 0; margin: 0 0 30px 0;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.servicesList li {
+  position: relative;
+  padding-left: 28px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.servicesList li::before {
+  content: '✓';
+  position: absolute; left: 0; top: 1px;
+  color: #009c3b; /* Verde-bandeira */
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.punchline {
+  font-weight: 600; font-style: italic;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 20px;
+}
+
+.ctaLink {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 600; color: #004d22;
+  transition: color 0.3s, transform 0.3s;
+}
+.ctaLink:hover {
+  color: #009c3b;
+  transform: translateX(5px);
+}
+
+/* --- Card de Qualificações --- */
+.qualCard {
+  background: linear-gradient(135deg, #f0fff4 0%, #fffde7 100%); /* Gradiente suave verde-amarelo */
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -15px rgba(0,77,34,0.1);
+}
+.qualCardGlow {
+  position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 40%);
+  opacity: 0; transition: opacity 0.5s;
+  animation: rotate 20s linear infinite;
+}
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.qualCard:hover .qualCardGlow {
+  opacity: 1;
+}
+
+.qualCardTitle {
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.qualsList {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+.qualItem {
+  display: flex; align-items: center; gap: 15px;
+  font-size: 1rem; font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.qualIcon {
+  color: #009c3b; /* Verde-bandeira */
+  flex-shrink: 0;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .section { padding: 80px 20px; }
+  .header { margin-bottom: 60px; }
+}

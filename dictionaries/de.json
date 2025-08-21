@@ -63,6 +63,10 @@
       {
         "title": "P&L-Analyse & Optimierung",
         "description": "Rentabilitätsanalyse nach Segment. Kostenstruktur & Marge optimieren. Umsatzströme verbessern. Break-Even & Szenarienplanung."
+      },
+       {
+        "title": "Erfahrung im Unternehmensvorstand",
+        "description": "Mit über 25 Jahren Erfahrung in multinationalen Unternehmen in den USA, Europa und Brasilien – einschließlich der Tätigkeit in mehreren Unternehmensvorständen – bringen wir Vorstandsexpertise in den Bereichen Strategie, Risiko, Governance, Transparenz und Ethik ein. Wir haben Gewinnwachstum gefördert, die Compliance gestärkt und Transformationen geleitet, um die Vision, Aufsicht und globale Perspektive für nachhaltiges Wachstum zu bieten."
       }
     ]
   },
@@ -205,5 +209,37 @@
     "global_reach_text": "Nordamerika, Europa und Lateinamerika"
   },
   "copyright": "© {year} Keystone Consulting. Alle Rechte vorbehalten."
-}
+ },
+  "brazilExpansion": {
+    "title": "Internationale Expansion nach Brasilien",
+    "subtitle": "Denken Sie daran, mit Ihrem Unternehmen in Brasilien Fuß zu fassen? Wir sind auch hier Ihr richtiger Partner.",
+    "intro_text": "Keystone Consulting bietet vollständige Eintrittsunterstützung für Unternehmen, die in Brasilien tätig sein möchten, einschließlich:",
+    "services_list": [
+      "Rechtsvertretung (Bevollmächtigter / nicht operativer Geschäftsführer)",
+      "Lokale Buchhaltung und Steuer-Compliance",
+      "Unternehmensregistrierung und regulatorische Beratung",
+      "Strategische Beratung zugeschnitten auf brasilianische Geschäftskultur und Risikoumgebung"
+    ],
+    "value_prop": "Mit unserem mehrsprachigen, multikulturellen Team helfen wir internationalen Unternehmen, die Komplexität des brasilianischen Marktes richtig einzuschätzen — sicher und effizient.",
+    "punchline": "Sie betreten nicht nur ein neues Land. Sie starten mit Struktur, Klarheit und lokaler Intelligenz.",
+    "cta_text": "Sprechen Sie mit uns über Ihren Markteintritt in Brasilien",
+    "features": [
+      {
+        "title": "Lokale Expertise",
+        "description": "Tiefes Verständnis der brasilianischen Geschäftskultur und -vorschriften"
+      },
+      {
+        "title": "Globales Netzwerk",
+        "description": "Verbindungen zu Schlüsselakteuren auf dem brasilianischen Markt"
+      },
+      {
+        "title": "Bewährter Erfolg",
+        "description": "Erfolgsbilanz bei großen internationalen Expansionen"
+      },
+      {
+        "title": "Strategische Partner",
+        "description": "Netzwerk aus Rechts-, Steuer- und Compliance-Experten"
+      }
+    ]
+  }
 }

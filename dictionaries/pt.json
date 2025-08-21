@@ -63,6 +63,10 @@
       {
         "title": "Análise e Otimização do DRE",
         "description": "Análise de lucratividade por produto, serviço ou divisão. Otimização de custos e margens. Oportunidades de crescimento de receita. Planejamento de cenários e ponto de equilíbrio."
+      },
+      {
+        "title": "Experiência em Conselhos Corporativos",
+        "description": "Com mais de 25 anos atuando em multinacionais nos EUA, Europa e Brasil — incluindo participação em múltiplos conselhos corporativos — trazemos expertise de alto nível em estratégia, risco, governança, transparência e ética. Impulsionamos o crescimento do lucro, fortalecemos o compliance e lideramos transformações, fornecendo a visão, supervisão e perspectiva global para um crescimento sustentável."
       }
     ]
   },
@@ -205,5 +209,37 @@
     "global_reach_text": "América do Norte, Europa e América Latina"
   },
   "copyright": "© {year} Keystone Consulting. Todos os direitos reservados."
-}
+ },
+  "brazilExpansion": {
+    "title": "Expansão Internacional para o Brasil",
+    "subtitle": "Pensando em expandir seu negócio para o Brasil? Nós te damos cobertura.",
+    "intro_text": "A Keystone Consulting oferece suporte completo de entrada para empresas que buscam operar no Brasil, incluindo:",
+    "services_list": [
+      "Representação legal (administrador ou procurador)",
+      "Contabilidade local e compliance fiscal",
+      "Registro empresarial e orientação regulatória",
+      "Consultoria estratégica adaptada à cultura empresarial brasileira e ambiente de risco"
+    ],
+    "value_prop": "Com nossa equipe multilíngue e multicultural, ajudamos empresas internacionais a navegar as complexidades do mercado brasileiro — com segurança e eficiência.",
+    "punchline": "Você não está apenas entrando em um novo país. Você está entrando com estrutura, clareza e inteligência local.",
+    "cta_text": "Fale conosco sobre entrar no Brasil",
+    "features": [
+      {
+        "title": "Expertise Local",
+        "description": "Entendimento profundo da cultura empresarial e regulamentações brasileiras"
+      },
+      {
+        "title": "Rede Global",
+        "description": "Conexões com principais players no mercado brasileiro"
+      },
+      {
+        "title": "Sucesso Comprovado",
+        "description": "Histórico com grandes expansões internacionais"
+      },
+      {
+        "title": "Parceiros Estratégicos",
+        "description": "Rede de especialistas jurídicos, fiscais e de compliance"
+      }
+    ]
+  }
 }
