@@ -1,4 +1,4 @@
-// src/components/Hero/Hero.js (ATUALIZADO COM ÍCONES SOCIAIS)
+// src/components/Hero/Hero.js (ATUALIZADO - ÍCONES REMOVIDOS)
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -9,15 +9,7 @@ import styles from './Hero.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Ícones copiados do componente Footer para consistência
-const SocialIcons = {
-  linkedin: (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-  ),
-  instagram: (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-  )
-};
+// ===== ÍCONES REMOVIDOS DESTA SEÇÃO =====
 
 const Hero = ({ dictionary, lang }) => {
   const heroRef = useRef(null);
@@ -26,7 +18,7 @@ const Hero = ({ dictionary, lang }) => {
   const headlineRef = useRef(null);
   const subheadlineRef = useRef(null);
   const scrollArrowRef = useRef(null);
-  const socialLinksRef = useRef(null); // Ref para os links sociais
+  // ===== REF DOS LINKS SOCIAIS REMOVIDA =====
 
   if (!dictionary) {
     return null;
@@ -55,12 +47,7 @@ const Hero = ({ dictionary, lang }) => {
       "-=0.8"
     );
 
-    // Animação para os links sociais
-    timeline.fromTo(socialLinksRef.current,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1 },
-      "-=0.6"
-    );
+    // ===== ANIMAÇÃO DOS LINKS SOCIAIS REMOVIDA =====
 
     timeline.fromTo(scrollArrowRef.current,
       { y: -20, opacity: 0},
@@ -116,12 +103,8 @@ const Hero = ({ dictionary, lang }) => {
           {dictionary.cta_button}
         </a>
         
-        {/* ===== MUDANÇA: Adição dos links sociais ===== */}
-        <div className={styles.socialLinks} ref={socialLinksRef}>
-          <a href="https://www.linkedin.com/in/florianpass/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">{SocialIcons.linkedin}</a>
-          <a href="https://www.instagram.com/meetkeystone/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">{SocialIcons.instagram}</a>
-        </div>
-        {/* =============================================== */}
+        {/* ===== MUDANÇA: Bloco de links sociais foi completamente removido daqui ===== */}
+
       </div>
 
       <a href="#pain-points" className={styles.scrollDownArrow} ref={scrollArrowRef} aria-label="Scroll down">

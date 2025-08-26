@@ -1,34 +1,44 @@
-// src/components/CalendlyEmbed/CalendlyEmbed.js
+// /app/components/CalendlyEmbed/CalendlyEmbed.js (ATUALIZADO)
 'use client';
 
 import React from 'react';
 import { InlineWidget } from 'react-calendly';
 import styles from './CalendlyEmbed.module.css';
 
-const CalendlyEmbed = ({ url, dictionary }) => {
+const CalendlyEmbed = ({ dictionary }) => {
+  const calendlyUrl = "https://calendly.com/florianpass/meet";
+
   return (
-    <div className={styles.calendlyContainer}>
-      {/* Usamos o dicionário para a mensagem de sucesso, que agora serve de título */}
-      <h2 className={styles.successTitle}>{dictionary.successMessage}</h2>
-      <p className={styles.successSubtitle}>Agora, basta escolher o melhor horário para a nossa conversa:</p>
-      
-      <div className={styles.widgetWrapper}>
-        <InlineWidget
-          url={url}
-          styles={{
-            height: '1000px', // Altura recomendada pelo Calendly para evitar barras de rolagem
-            borderRadius: 'var(--border-radius)',
-          }}
-          pageSettings={{
-            backgroundColor: 'ffffff',
-            hideEventTypeDetails: false,
-            hideLandingPageDetails: false,
-            primaryColor: '0D1B2A', // Cor primária (azul escuro)
-            textColor: '1B263B'      // Cor do texto
-          }}
-        />
+    <section className={styles.calendlySection}>
+      <div className="container">
+        <div className={styles.calendlyContainer}>
+          <h2 className={styles.title}>{dictionary.successMessage || 'Obrigado!'}</h2>
+          <p className={styles.subtitle}>
+            Sua solicitação foi enviada com sucesso. Agora, basta escolher abaixo o melhor horário para nossa conversa estratégica.
+          </p>
+          
+          <div className={styles.widgetWrapper}>
+            <InlineWidget
+              url={calendlyUrl}
+              styles={{
+                /* ===== ALTERAÇÃO PRINCIPAL AQUI ===== */
+                height: '1000px', // Aumentado de 700px para 1000px para evitar scroll
+                /* ======================================= */
+                width: '100%',
+                borderRadius: 'var(--border-radius)',
+              }}
+              pageSettings={{
+                backgroundColor: 'F8F9FA',
+                hideEventTypeDetails: false,
+                hideLandingPageDetails: false,
+                primaryColor: '0D1B2A',
+                textColor: '1B263B'
+              }}
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

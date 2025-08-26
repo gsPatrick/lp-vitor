@@ -1,4 +1,4 @@
-/* src/components/Header/Header.module.css (ATUALIZADO PARA LOGO + TEXTO EMBAIXO) */
+/* src/components/Header/Header.module.css (ATUALIZADO) */
 
 .headerContainer {
   position: fixed;
@@ -29,39 +29,34 @@
   align-items: center;
 }
 
-/* ===== NOVOS ESTILOS PARA O LOGO E TEXTO EMBAIXO ===== */
 .logoLink {
   display: flex;
-  /* MUDANÇA PRINCIPAL: Alinhar verticalmente */
   flex-direction: column;
   align-items: center;
-  gap: 2px; /* Espaço pequeno entre a imagem e o texto */
+  gap: 2px;
 }
 
 .logoImage {
   transition: filter var(--transition-speed) ease;
   filter: brightness(0) invert(1);
-  height: 35px; /* Ajusta a altura da imagem */
+  height: 35px;
   width: auto;
 }
 
 .logoText {
-  font-size: 0.7rem; /* Texto menor para caber embaixo */
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   color: #fff;
   transition: color var(--transition-speed) ease;
 }
 
-/* Ao rolar, removemos o filtro da imagem e mudamos a cor do texto */
 .headerContainer.scrolled .logoImage {
   filter: none;
 }
 .headerContainer.scrolled .logoText {
   color: var(--primary-color);
 }
-/* ====================================================== */
-
 
 .navLinks {
   display: none;
@@ -86,7 +81,6 @@
   transition: all var(--transition-speed) ease-in-out;
 }
 
-/* Estado com scroll (.scrolled) */
 .headerContainer.scrolled .navLinkItem {
   color: var(--primary-color);
   opacity: 1;
@@ -95,8 +89,6 @@
   background: var(--primary-color);
 }
 
-
-/* --- Restante do CSS permanece similar --- */
 .navLinkItem::after {
   content: '';
   position: absolute;
@@ -118,6 +110,29 @@
   width: 100%;
 }
 
+/* ===== MUDANÇA: NOVOS ESTILOS PARA ÍCONES SOCIAIS ===== */
+.socialIcons {
+  display: none; /* Escondido por padrão (mobile-first) */
+  align-items: center;
+  gap: 15px;
+  margin: 0 25px; /* Espaçamento entre os links e os ícones/botão */
+}
+
+.socialIcons a {
+  color: var(--text-light);
+  opacity: 0.8;
+  transition: color var(--transition-speed) ease, opacity var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.socialIcons a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.headerContainer.scrolled .socialIcons a {
+  color: var(--primary-color);
+}
+/* ======================================================= */
 
 .ctaButton {
   display: none;
@@ -174,11 +189,12 @@
 @media (min-width: 992px) {
   .menuToggle { display: none; }
   .navLinks { display: flex; }
+  .socialIcons { display: flex; } /* ===== MUDANÇA: Exibe os ícones em desktop ===== */
   .ctaButton { display: inline-block; }
 }
 
 @media (max-width: 768px) {
     .logoText {
-        display: none; /* Em telas menores, esconde o texto para não poluir */
+        display: none;
     }
 }

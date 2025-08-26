@@ -1,138 +1,137 @@
-/* /app/components/AssessmentForm/AssessmentForm.module.css (REVISÃO FINAL) */
+/* /app/components/AssessmentForm/AssessmentForm.module.css (ATUALIZADO) */
 
 .formSection {
     background-color: var(--primary-color);
-    padding: 120px 20px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.formWrapper {
-    max-width: 1100px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-    padding: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    align-items: center;
-    gap: 60px;
-}
-
-.introContent {
+    padding: 80px 20px;
     color: var(--text-light);
 }
 
+/* ===== ALTERAÇÕES PRINCIPAIS AQUI ===== */
+.formContainer {
+    display: flex; /* MUDANÇA: de grid para flex */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 40px; /* Espaço entre o texto e o formulário */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro {
+    text-align: center; /* Centraliza o texto de introdução */
+    max-width: 700px;
+}
+/* ======================================= */
+
 .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    margin-bottom: 15px;
     color: #fff;
 }
 
-.subtitle {
+.text {
     font-size: 1.1rem;
     line-height: 1.7;
     opacity: 0.8;
 }
 
+.formWrapper {
+    width: 100%;
+    background-color: rgba(65, 90, 119, 0.2);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .formGroup {
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .formGroup label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.9rem;
-    color: var(--text-light);
-    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .formGroup input,
 .formGroup select {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius);
+    background-color: rgba(13, 27, 42, 0.7);
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    padding: 12px 15px;
+    color: var(--text-light);
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: var(--text-light);
-    transition: all 0.3s ease;
-    appearance: none;
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-/* ESTILO PARA PLACEHOLDERS DE INPUT */
 .formGroup input::placeholder {
-    color: var(--text-light);
-    opacity: 0.5;
-}
-
-/* === SOLUÇÃO DEFINITIVA PARA PLACEHOLDERS DE SELECT === */
-/* Quando o select for obrigatório (:required) e estiver inválido (:invalid),
-   ou seja, com a primeira opção (value="") selecionada, aplique o estilo de placeholder. */
-.formGroup select:required:invalid {
-    color: rgba(255, 255, 255, 0.5); /* Cor clara com opacidade */
-}
-
-/* Garante que as opções no dropdown (quando aberto) não fiquem transparentes */
-.formGroup select option {
-    color: #333; /* Cor escura para o texto das opções abertas */
-    background: #fff;
-}
-
-.formGroup select {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-    background-position: right 0.7rem center;
-    background-repeat: no-repeat;
-    background-size: 1.25em;
-    padding-right: 2.5rem;
+    color: rgba(224, 225, 221, 0.5);
 }
 
 .formGroup input:focus,
 .formGroup select:focus {
     outline: none;
     border-color: var(--accent-color);
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
 }
 
-.formRow { display: flex; gap: 24px; }
-.formRow .formGroup { flex: 1; }
-.countryCode { flex: 0 0 140px; }
-.phone { flex: 1; }
+.phoneGroup {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
 
 .submitButton {
-    width: 100%; padding: 16px; background-color: var(--accent-color); color: var(--primary-color);
-    border: none; border-radius: var(--border-radius); font-size: 1.1rem; font-weight: 700;
-    cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.5px; 
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
     margin-top: 10px;
 }
-.submitButton:hover:not(:disabled) { background-color: #c5a032; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-.submitButton:disabled { background-color: #555; color: #999; cursor: not-allowed; }
 
-.privacyText { text-align: center; font-size: 0.85rem; color: var(--text-light); opacity: 0.7; margin-top: 25px; }
-.formMessage { text-align: center; margin-top: 20px; padding: 12px; border-radius: var(--border-radius); font-weight: 500; }
-.formMessage.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-.formMessage.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.submitButton:hover:not(:disabled) {
+    background-color: #e6c65d;
+    transform: translateY(-2px);
+}
 
-@media (max-width: 992px) {
-    .formWrapper { grid-template-columns: 1fr; padding: 40px; gap: 40px; }
-    .introContent { text-align: center; }
+.submitButton:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.privacyText {
+    font-size: 0.8rem;
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.errorBox {
+    background-color: #ff4d4d2c;
+    border: 1px solid #ff4d4d;
+    color: #ffd1d1;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
-    .formSection { padding: 40px 15px; }
-    .formWrapper { padding: 30px 25px; }
-    .formRow { flex-direction: column; gap: 0; }
-    .formGroup { margin-bottom: 20px; }
-    .title { font-size: 2rem; }
+    .phoneGroup {
+        grid-template-columns: 1fr;
+    }
+    .formWrapper {
+        padding: 25px;
+    }
 }
