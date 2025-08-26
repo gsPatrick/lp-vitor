@@ -1,4 +1,4 @@
-// src/app/[lang]/page.js (COM BOTÃO FLUTUANTE)
+// /app/[lang]/page.js (ATUALIZADO)
 import { getDictionary } from '../../../get-dictionary';
 import { getFormDictionary } from '../../../dictionaries/form-dictionary';
 
@@ -16,15 +16,14 @@ import ContactSection from '../components/ContactSection/ContactSection';
 import AssessmentForm from '../components/AssessmentForm/AssessmentForm';
 import AhkSection from '../components/AhkSection/AhkSection';
 import Footer from '../components/Footer/Footer';
-import FloatingWhatsApp from '../components/FloatingWhatsApp/FloatingWhatsApp'; // ===== 1. IMPORTAR O NOVO COMPONENTE =====
-import BrazilExpansion from '../components/BrazilExpansion/BrazilExpansion'; // 1. IMPORTAR O NOVO COMPONENTE
+import FloatingWhatsApp from '../components/FloatingWhatsApp/FloatingWhatsApp';
+import BrazilExpansion from '../components/BrazilExpansion/BrazilExpansion';
 
 
 export default async function Home({ params: { lang } }) {
   const dictionary = await getDictionary(lang);
   const formDictionary = await getFormDictionary(lang);
 
-  // Extrai o link do WhatsApp do dicionário de contato
   const whatsappChannel = dictionary.contact.channels.find(c => c.title === 'WhatsApp');
   const whatsappLink = whatsappChannel ? whatsappChannel.link : '';
 
@@ -38,17 +37,20 @@ export default async function Home({ params: { lang } }) {
       <AboutFounder dictionary={dictionary.aboutFounder} />
       <Testimonials dictionary={dictionary.testimonials} />
       <Audience dictionary={dictionary.audience} />
-      
-      {/* 2. ADICIONAR O NOVO COMPONENTE AQUI */}
       <BrazilExpansion dictionary={dictionary.brazilExpansion} />
-      
       <FAQ dictionary={dictionary.faq} />
       <CTASection dictionary={dictionary.cta} />
       <ContactSection dictionary={dictionary.contact} />
+      
+      {/* ===== ALTERAÇÃO PRINCIPAL AQUI ===== */}
+      {/* Adicionamos a prop 'lang' ao componente */}
       <AssessmentForm 
         dictionary={formDictionary.form} 
-        formData={formDictionary.formData} 
+        formData={formDictionary.formData}
+        lang={lang} 
       />
+      {/* ======================================= */}
+
       <AhkSection dictionary={dictionary.ahk} lang={lang} />
       <Footer dictionary={dictionary.footer} />
       <FloatingWhatsApp link={whatsappLink} />

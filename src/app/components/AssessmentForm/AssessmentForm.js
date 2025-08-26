@@ -1,13 +1,13 @@
-// /app/components/AssessmentForm/AssessmentForm.js (ATUALIZADO COM REDIRECIONAMENTO CORRETO)
+// /app/components/AssessmentForm/AssessmentForm.js (CORREÇÃO FINAL)
 'use client';
 
 import { useState } from 'react';
-// 1. IMPORTAR useParams e useRouter
-import { useRouter, useParams } from 'next/navigation';
+// 1. REMOVEMOS o 'useParams' daqui
+import { useRouter } from 'next/navigation';
 import styles from './AssessmentForm.module.css';
 
-const AssessmentForm = ({ dictionary, formData }) => {
-    // ... (os useStates permanecem os mesmos)
+// 2. O componente agora aceita 'lang' como uma prop
+const AssessmentForm = ({ dictionary, formData, lang }) => { 
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [country, setCountry] = useState('');
@@ -18,8 +18,7 @@ const AssessmentForm = ({ dictionary, formData }) => {
     const [errorMessage, setErrorMessage] = useState('');
     
     const router = useRouter();
-    // 2. OBTER OS PARÂMETROS DA URL (que inclui o idioma)
-    const params = useParams();
+    // 3. REMOVEMOS a linha 'const params = useParams();'
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -45,12 +44,10 @@ const AssessmentForm = ({ dictionary, formData }) => {
                 throw new Error(result.error || 'An unknown error occurred.');
             }
             
-            // 3. CONSTRUIR A URL DE REDIRECIONAMENTO COM O IDIOMA
-            // Extrai o idioma (ex: 'pt', 'en') dos parâmetros da URL
-            const lang = params.lang || 'en'; // Usa 'en' como padrão, por segurança
-            const successUrl = `/${lang}/assessment/success`;
+            // 4. USAMOS a prop 'lang' diretamente para construir a URL
+            // Isso garante que o idioma correto seja sempre usado.
+            const successUrl = `/${lang || 'en'}/assessment/success`;
 
-            // Redireciona para a URL correta (ex: /pt/assessment/success)
             router.push(successUrl);
 
         } catch (error) {
@@ -61,21 +58,18 @@ const AssessmentForm = ({ dictionary, formData }) => {
     };
 
     return (
-        // O JSX do formulário não muda
+        // O JSX do formulário continua o mesmo
         <section id="assessment-form" className={styles.formSection}>
             <div className={`container ${styles.formContainer}`}>
                 <div className={styles.intro}>
                     <h2 className={styles.title}>{dictionary.introTitle}</h2>
                     <p className={styles.text}>{dictionary.introText}</p>
                 </div>
-
                 <div className={styles.formWrapper}>
                     <form onSubmit={handleSubmit} className={styles.form}>
                         {status === 'error' && (
                             <div className={styles.errorBox}>{errorMessage}</div>
                         )}
-                        
-                        {/* Todos os campos do formulário permanecem aqui, sem alterações */}
                         <div className={styles.formGroup}>
                             <label htmlFor="fullName">{dictionary.fullNameLabel}</label>
                             <input type="text" id="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder={dictionary.fullNamePlaceholder} required />
@@ -121,3 +115,5 @@ const AssessmentForm = ({ dictionary, formData }) => {
         </section>
     );
 };
+
+export default AssessmentForm;
