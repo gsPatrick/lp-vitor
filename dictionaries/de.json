@@ -1,113 +1,98 @@
+
 {
   "header": {
     "nav": {
-      "services": "Kerndienstleistungen",
-      "about": "Über den Gründer",
+      "services": "Leistungsangebot",
+      "about": "Über uns",
       "testimonials": "Kundenstimmen",
       "faq": "FAQ",
       "contact": "Kontakt"
     },
-    "cta_button": "Beratung Vereinbaren"
+    "cta_button": "Termin buchen"
   },
   "hero": {
-    "headline_line1": "Verwandeln Sie Ihr wachsendes Unternehmen in eine Kraft",
-    "headline_line2": "der Wertschöpfung für Aktionäre.",
-    "subheadline": "Beenden Sie den Blindflug bei Ihren Finanzen – erhalten Sie Finanzführung auf C-Level-Niveau ohne das Preisschild eines Vollzeit-CFOs. Was wäre, wenn ein international erfahrener CFO Ihre Finanzstrategie zu einem Bruchteil der Kosten leiten könnte?",
-    "cta_button": "Strategieberatung Jetzt Vereinbaren"
+    "headline_line1": "Steigern Sie nicht nur Ihren Umsatz, sondern auch den",
+    "headline_line2": "Wert Ihres Unternehmens.",
+    "subheadline": "Beenden Sie den Blindflug mit Ihren Zahlen – nutzen Sie eine Finanzdienstleistung auf höchstem Niveau ohne des Preisschilds eines angestellten Finanzleiters. Was wäre, wenn ein international erfahrener CFO Ihre Finanzstragetie zu einem Bruchteil der Kosten leiten könnte?",
+    "cta_button": "Mehr erfahren - Termin buchen"
   },
   "painPoints": {
-    "title": "Die Verborgene Krise, Die Wachstumsunternehmen Ruiniert",
-    "subtitle": "Millionenentscheidungen basierend auf unvollständigen Informationen. Ihre aktuellen Berichte sind entweder veraltet oder unzuverlässig.",
+    "title": "Die verborgene Krise, die Wachstumsunternehmen ruiniert",
+    "subtitle": "Ihre wichtigsten Entscheidungen basieren auf unzureichenden Informationen, denn Ihre Berichte sind entwerder veraltet oder unzuverlässig.",
     "cards": [
       {
         "title": "Sie wachsen blind",
-        "description": "Millionenentscheidungen basierend auf unvollständigen Informationen. Ihre aktuellen Berichte sind entweder veraltet oder unzuverlässig."
+        "description": "Ihre wichtigsten Entscheidungen basieren auf unzureichenden Informationen, denn Ihre Berichte sind entwerder veraltet oder unzuverlässig."
       },
       {
         "title": "Cashflow-Chaos",
-        "description": "Umsatz steigt, aber Geld bleibt knapp. Jeder Monat ist ein finanzielles Überraschungsfest – leider kein gutes."
+        "description": "Ihr Umsatz steigt, aber der Saldo auf Ihrem Bankkonto nicht. Jeder Monat ist wie ein finanzielles Überraschungsei – aber leider kein leckeres."
       },
       {
         "title": "Ständiges Krisenmanagement",
-        "description": "Reaktive statt strategischer Planung. Probleme kosten Sie schon jetzt Zeit und Geld."
+        "description": "Sie löschen nur daurend Feuer anstatt die Zukunft zu kreieren. Probleme kosten schon jetzt Zeit und Geld."
       }
     ]
   },
   "advantage": {
     "title_line1": "Der Keystone-Vorteil:",
-    "title_line2": "Finanzielle Klarheit, die echtes Wachstum antreibt",
-    "text": "Wir reparieren nicht nur Ihre Zahlen – wir schaffen die Infrastruktur, um Ihr Unternehmen an die Spitze zu bringen.",
+    "title_line2": "Finanzielle Klarheit, die den Wert Ihrer Firma erhöht",
+    "text": "Wir bringen nicht nur Ihre Zahlen in Ordnung – wir schaffen die Infrastruktur, um Ihr Unternehmen an die Spitze zu bringen.",
     "benefits": [
       "Strategische Finanzführung statt einfacher Buchhaltung",
-      "Finanzielle Echtzeit-Einblicke",
+      "Finanzinformationen in Echtzeit",
       "Proaktive Problemerkennung"
     ]
   },
   "services": {
-    "title": "Unsere Hauptleistungen",
+    "title": "Unser Leistungsangebot",
     "subtitle": "Wo Strategie auf Umsetzung trifft.",
-    "link": "Mehr Erfahren →",
+    "link": "Mehr erfahren →",
     "tabs": [
       {
-        "title": "Chief Financial Officer Services",
-        "description": "Finanzstrategie & Planung angepasst an Ihre Ziele. Vorstandsgeeignete Finanzberichte. Entscheidungsunterstützung bei großen Veränderungen. Risikomanagement & Compliance."
+        "title": "Finanzleitung",
+        "description": "Finanzstrategie und Planung angepasst an Ihre Ziele. Individuelle Finanzberichtserstattung. Beste Entscheidungsunterstützung. Risikomanagment und Compliance."
       },
       {
-        "title": "Financial Controller Solutions",
+        "title": "Lösungen für Ihr Controlling",
         "description": "Verlässliche, zeitgerechte Finanzberichte. Monatsabschlüsse & Abweichungsanalysen. Cashflow-Prognosen & Steuerung. Interne Kontrollen & Prozessoptimierung. GAAP-Konformität."
       },
       {
-        "title": "Cashflow-Optimierung",
-        "description": "Vorhersagbares Cashflow-Management. Modellierung & Prognosen. Working Capital Strategien. Zahlungsbedingungen & Kontoabwicklung. Prävention und Notfallplanung."
+        "title": "Cash Flow Optimierung",
+        "description": "Cashflow-Management mit internationalem Standard. Modellierung & Prognosen. Working Capital Strategien. Zahlungsbedingungen."
       },
       {
-        "title": "P&L-Analyse & Optimierung",
-        "description": "Rentabilitätsanalyse nach Segment. Kostenstruktur & Marge optimieren. Umsatzströme verbessern. Break-Even & Szenarienplanung."
+        "title": "GuV-Analyse und Optimierung",
+        "description": "Vertikale und horizontales Rentabilitätsanalyse. Margen- und Kostenstrukturanalyse. Break-Even und Szenarioplanung."
       },
-       {
-        "title": "Erfahrung im Unternehmensvorstand",
-        "description": "Mit über 25 Jahren Erfahrung in multinationalen Unternehmen in den USA, Europa und Brasilien – einschließlich der Tätigkeit in mehreren Unternehmensvorständen – bringen wir Vorstandsexpertise in den Bereichen Strategie, Risiko, Governance, Transparenz und Ethik ein. Wir haben Gewinnwachstum gefördert, die Compliance gestärkt und Transformationen geleitet, um die Vision, Aufsicht und globale Perspektive für nachhaltiges Wachstum zu bieten."
+      {
+        "title": "Aufsichtsratserfahrung",
+        "description": "Mit über 25 Jahren Erfahrung in multinationalen Unternehmen in den USA, Europa und Brasilien – einschließlich der Tätigkeit in mehreren Aufsichtsräten – bringen wir Aufsichtsratsexpertise in den Bereichen Strategie, Risiko, Governance, Transparenz und Ethik ein. Wir haben Gewinnwachstum gefördert, die Compliance gestärkt und Transformationen geleitet, um die Vision, Aufsicht und globale Perspektive für nachhaltiges Wachstum zu bieten."
       }
     ]
   },
-"aboutFounder": {
-  "tagline": "Ihr Strategischer Finanzpartner",
-  "name": "Florian Pass",
-  "bio_intro": "Fractional CFO & Strategieberater mit 25 Jahren globaler Erfahrung (USA, Schottland, Deutschland, Brasilien).",
-  "bio_highlights_title": "Warum Florian für Ihr Unternehmen entscheidend ist:",
-  "bio_highlights": [
-    "US GAAP-Experte für US-konforme Finanzberichte",
-    "SOX-Erfahrung für börsennotierte Standards",
-    "IFRS-Kenntnisse für globale Operationen",
-    "Führung großer, interdisziplinärer Teams"
-  ],
-      "quote": "Erfolg entsteht nicht durch Glück, sondern durch eine starke Finanzbasis und klare Strategie."
-},
+  "aboutFounder": {
+    "tagline": "Ihr strategischer Finanzpartner",
+    "name": "Florian Pass",
+    "bio_intro": "Ihr Teilzeit-CFO & Strategieberater mit mehr als 25 Jahren globaler Erfahrung (USA, Schottland, Deutschland, Brasilien).",
+    "bio_highlights_title": "Warum Florian für Ihr Unternehmen entscheidend ist:",
+    "bio_highlights": [
+      "US GAAP-Experte für US-konforme Finanzberichte",
+      "SOX-Erfahrung für börsennotierte Standards",
+      "IFRS-Kenntnisse für globale Operationen",
+      "Führung großer, interdisziplinärer Teams"
+    ],
+    "quote": "„Die besten Unternehmen der Welt sehen Ihre Verwaltung als Teil des Vermögen und nicht als eine bürkratische Belastung und handeln dementsprechend. Erfolg entsteht nicht durch Glück, sondern durch eine klare Strategie und ist getragen durch eine starke Finanzbasis.“"
+  },
   "testimonials": {
     "title": "Kundenstimmen",
     "nav_previous": "Zurück",
     "nav_next": "Weiter",
-    "items": [
-      {
-        "quote": "\"Früher trafen wir Entscheidungen aus dem Bauch heraus – heute mit Echtzeitdaten. Unser Cashflow ist berechenbar geworden und wir sind um 40 % gewachsen.\"",
-        "name": "Sarah Chen",
-        "title": "CEO, TechFlow Solutions"
-      },
-      {
-        "quote": "\"Florian hat nicht nur aufgeräumt – er hat unsere gesamte Finanzstrategie erneuert. Jetzt planen wir Quartale im Voraus.\"",
-        "name": "Marcus Rodriguez",
-        "title": "Gründer, Rodriguez Construction Group"
-      },
-      {
-        "quote": "\"Mit Keystone haben wir einen CFO auf Weltklasseniveau auf Abruf. Ein echter Game-Changer.\"",
-        "name": "Jennifer Walsh",
-        "title": "Partnerin, Walsh & Associates Legal"
-      }
-    ]
+    "items": []
   },
   "audience": {
-    "title": "Für wen ist das?",
-    "subtitle": "Wir unterstützen ambitionierte Unternehmen, die bereit sind, strukturiert zu wachsen:",
+    "title": "Wo machen wir den Unterschied?",
+    "subtitle": "Wir unterstützen ambitionierte Unternehmen, die struktiert wachsen wollen, in allen Geschäftsfeldern. Dies beinhaltet:",
     "profiles": [
       {
         "title": "Industrie & Produktion",
@@ -118,11 +103,11 @@
         "description": ""
       },
       {
-        "title": "Gesundheitssektor & medizinische Organisationen",
+        "title": "Gesundheitsbereich",
         "description": ""
       },
       {
-        "title": "E-Commerce & Einzelhandel mit Expansionsplänen",
+        "title": "E-Commerce & Einzelhandel",
         "description": ""
       }
     ]
@@ -145,100 +130,100 @@
       },
       {
         "question": "Ist das günstiger als ein Vollzeit-CFO?",
-        "answer": "Ein Top-CFO kostet $200K-$400K jährlich. Unsere Leistungen liefern den gleichen Wert – zu einem Bruchteil."
+        "answer": "Die jährlichen Kosten für einen Top-CFO in Deutschland variieren stark, liegen aber in der Regel im hohen sechsstelligen Bereich bis weit über eine Million Euro. Unsere Leistungen liefern den gleichen Wert - zu einem Bruchteil."
       }
     ]
   },
   "cta": {
-    "title": "Bereit für Ihre Finanztransformation?",
-    "subtitle": "Beenden Sie Entscheidungen im Dunkeln. Jeden Tag ohne Klarheit verlieren Sie Chancen. Erfolgreiche Unternehmen bauen zuerst ihre Finanzbasis.",
-    "button": "Ihren individuellen Finanzfahrplan entdecken"
+    "title": "Bereit für die Verwandlung Ihrer Finanzen?",
+    "subtitle": "Beenden Sie den finanziellen Blindflug. Jeder Tag ohne Klarheit kostet Geld. Erfolgreiche Unternehmen haben eine solide Basis ihrer Finanzen.",
+    "button": "Entdecken Sie Ihren Finanzfahrplan"
   },
   "ahk": {
     "title": "Vertrauenswürdig für globale Institutionen",
-    "text": "Florian Pass ist offizielles Mitglied der Deutsch-Brasilianischen Industrie- und Handelskammer (AHK), eine angesehene Institution zur Förderung von Wirtschaft und Geschäft zwischen Deutschland und Brasilien.",
+    "text": "Keystone Consulting ist offizielles Mitglied der deutsch-brasilianischen Handelskammer (AHK), eine angesehene Institution zu Förderung von Wirtschaft und Austausch zwischen Deutschland und Brasilien.",
     "seal1_alt": "SIEGEL AHK 1",
     "seal2_alt": "SIEGEL AHK 2"
   },
-"contact": {
-  "title": "Bereit, das finanzielle Potenzial Ihres Unternehmens zu entfalten?",
-  "subtitle": "Wählen Sie Ihren bevorzugten Weg, um mit uns in Kontakt zu treten.",
-  "channels": [
-    {
-      "title": "E-Mail",
-      "contact": "florian@meetkeystone.com",
-      "link": "mailto:florian@meetkeystone.com"
-    },
-    {
-      "title": "Telefon",
-      "contact": "+55 (11) 97285-5566",
-      "link": "tel:+5511972855566"
-    },
-    {
-      "title": "WhatsApp",
-      "contact": "Schnelle Antwort bei dringenden Fragen",
-      "link": "https://wa.me/5511972855566"
-    }
-  ],
-  "arrow": "→"
-},
-"footer": {
-  "logo": "Keystone Consulting",
-  "tagline": "Finanzielle Klarheit für ambitionierte Unternehmen.",
-  "navigate": {
-    "title": "Navigation",
-    "links": {
-      "services": "Leistungen",
-      "about": "Über Uns",
-      "testimonials": "Kundenstimmen",
-      "faq": "FAQ"
-    }
-  },
-  "legal": {
-    "title": "Rechtliches",
-    "links": {
-      "privacy": "Datenschutzrichtlinie",
-      "terms": "Nutzungsbedingungen"
-    }
-  },
   "contact": {
-    "title": "Kontakt",
-    "email": "florian@meetkeystone.com",
-    "phone": "+55 (11) 97285-5566",
-    "global_reach_title": "Globale Reichweite",
-    "global_reach_text": "Nordamerika, Europa und Lateinamerika"
+    "title": "Entfalten Sie das finanzielle Potential Ihre Unternehmens",
+    "subtitle": "Wählen Sie Ihren bevorzugten Weg, um mit uns in Kontakt zu treten.",
+    "channels": [
+      {
+        "title": "E-Mail",
+        "contact": "florian@meetkeystone.com",
+        "link": "mailto:florian@meetkeystone.com"
+      },
+      {
+        "title": "Telefon",
+        "contact": "+55 (11) 97285-5566",
+        "link": "tel:+5511972855566"
+      },
+      {
+        "title": "WhatsApp",
+        "contact": "Schnelle Antwort bei dringenden Fragen",
+        "link": "https://wa.me/5511972855566"
+      }
+    ],
+    "arrow": "→"
   },
-  "copyright": "© {year} Keystone Consulting. Alle Rechte vorbehalten."
- },
+  "footer": {
+    "logo": "Keystone Consulting",
+    "tagline": "Finanzielle Klarheit für ambitionierte Unternehmen.",
+    "navigate": {
+      "title": "Navigation",
+      "links": {
+        "services": "Leistungen",
+        "about": "Über Uns",
+        "testimonials": "Kundenstimmen",
+        "faq": "FAQ"
+      }
+    },
+    "legal": {
+      "title": "Rechtliches",
+      "links": {
+        "privacy": "Datenschutzrichtlinie",
+        "terms": "Nutzungsbedingungen"
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "florian@meetkeystone.com",
+      "phone": "+55 (11) 97285-5566",
+      "global_reach_title": "Globale Reichweite",
+      "global_reach_text": "Nordamerika, Europa und Lateinamerika"
+    },
+    "copyright": "© {year} Keystone Consulting. Alle Rechte vorbehalten."
+  },
   "brazilExpansion": {
     "title": "Internationale Expansion nach Brasilien",
     "subtitle": "Denken Sie daran, mit Ihrem Unternehmen in Brasilien Fuß zu fassen? Wir sind auch hier Ihr richtiger Partner.",
-    "intro_text": "Keystone Consulting bietet vollständige Eintrittsunterstützung für Unternehmen, die in Brasilien tätig sein möchten, einschließlich:",
+    "intro_text": "Keystone Consulting bietet komplete Lösungen für Ihren Marketeintritt in Brasilien an. Dies beinhaltet unter anderem:",
     "services_list": [
       "Rechtsvertretung (Bevollmächtigter / nicht operativer Geschäftsführer)",
-      "Lokale Buchhaltung und Steuer-Compliance",
+      "Lokale Buchhaltung und Steuer-Compliance nach internationalem Standard",
       "Unternehmensregistrierung und regulatorische Beratung",
-      "Strategische Beratung zugeschnitten auf brasilianische Geschäftskultur und Risikoumgebung"
+      "Strategische Beratung zugeschnitten auf brasilianische die Geschäftskultur und Risikoeinschätzung"
     ],
     "value_prop": "Mit unserem mehrsprachigen, multikulturellen Team helfen wir internationalen Unternehmen, die Komplexität des brasilianischen Marktes richtig einzuschätzen — sicher und effizient.",
     "punchline": "Sie betreten nicht nur ein neues Land. Sie starten mit Struktur, Klarheit und lokaler Intelligenz.",
     "cta_text": "Sprechen Sie mit uns über Ihren Markteintritt in Brasilien",
     "features": [
       {
-        "title": "Lokale Expertise",
-        "description": "Tiefes Verständnis der brasilianischen Geschäftskultur und -vorschriften"
+        "title": "Gesetzliche Vertretung und Geschäftsführung",
+        "description": ""
       },
       {
-        "title": "Globales Netzwerk",
-        "description": "Verbindungen zu Schlüsselakteuren auf dem brasilianischen Markt"
+        "title": "Sicher in Kultur und Sprache",
+        "description": ""
       },
       {
-        "title": "Bewährter Erfolg",
-        "description": "Erfolgsbilanz bei großen internationalen Expansionen"
+        "title": "Strategisches Netzwerk mit lokalen Partnern",
+        "description": ""
       },
       {
-        "title": "Strategische Partner",
-        "description": "Netzwerk aus Rechts-, Steuer- und Compliance-Experten"
+        "title": "Erfahren in Compliance-, Steuer- und regulatorischen Fragen",
+        "description": ""
       }
     ]
   }

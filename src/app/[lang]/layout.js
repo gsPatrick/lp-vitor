@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 
 // A metadata aqui pode sobrescrever ou complementar a do layout raiz.
 export const metadata = {
-  title: "Financify | Strategic CFO Services",
+  title: "Keystone Consulting | Strategic CFO Services",
   description: "C-Level strategic expertise for ambitious global businesses.",
 };
 

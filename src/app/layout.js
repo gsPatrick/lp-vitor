@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Financify",
+  title: "Keystone Consulting",
   description: "Strategic CFO services for ambitious global businesses.",
 };
 
